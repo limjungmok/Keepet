@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  h_name: MyString
+  h_phone: MyString
+  h_address: MyString
+  h_small: 1
+  h_big: 1
+  h_contract: false
+  h_walking: false
+  h_time: MyString
+  user_id: 1
+
+two:
+  h_name: MyString
+  h_phone: MyString
+  h_address: MyString
+  h_small: 1
+  h_big: 1
+  h_contract: false
+  h_walking: false
+  h_time: MyString
+  user_id: 1
