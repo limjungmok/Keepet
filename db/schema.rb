@@ -11,7 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104004736) do
+ActiveRecord::Schema.define(version: 20150908171303) do
+
+  create_table "albums", force: :cascade do |t|
+    t.string   "a_photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hospitals", force: :cascade do |t|
+    t.string   "h_name"
+    t.string   "h_phone"
+    t.string   "h_address"
+    t.integer  "h_small"
+    t.integer  "h_big"
+    t.boolean  "h_contract"
+    t.boolean  "h_walking"
+    t.string   "h_time"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.float    "h_latitude"
+    t.float    "h_lontitude"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.boolean  "r_check"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "t_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +56,8 @@ ActiveRecord::Schema.define(version: 20141104004736) do
     t.string   "password_digest"
     t.string   "remember_digest"
     t.boolean  "admin",           default: false
+    t.integer  "reservation_id"
+    t.integer  "hospital_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
