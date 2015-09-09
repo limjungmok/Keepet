@@ -1,1 +1,9 @@
-show!
+<% @http_party_json.each do |h| %>
+	병원이름 : <%= h["WRKP_NM"] %><br> 
+	주소 : <%= h["SITE_ADDR"] %><br>
+	연락처 : <%= h["SITE_TEL"] %><br>
+	<hr>
+<% end %>
+
+
+<%= @h_name %>
