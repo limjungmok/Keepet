@@ -24851,3 +24851,196 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for ::1 at 2015-09-09 16:38:12 +0900
+
+
+Started GET "/hospitals/1" for ::1 at 2015-09-09 16:41:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered hospitals/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (8.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 733ms (Views: 548.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-d12747deb62b7e3be863228b7904e2af6ada0acf108d0423e6eda66779fbcf34.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/hospitals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/static_pages.self-9d3bdddd27a6a877a95d2062d994bc2cdb5070707453ec9fe2467ab8e97e2c81.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for ::1 at 2015-09-09 16:41:11 +0900
+
+
+Started GET "/" for ::1 at 2015-09-09 19:55:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (9.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 593ms (Views: 575.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-09-09 19:55:26 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 125.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hospitals/1" for ::1 at 2015-09-09 19:55:29 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered hospitals/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 829ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hospitals/1" for ::1 at 2015-09-09 19:56:10 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered hospitals/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `each' for nil:NilClass):
+  app/views/hospitals/show.html.erb:1:in `_app_views_hospitals_show_html_erb___2787680957012796617_70317235743220'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (7.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+
+
+Started GET "/hospitals/1" for ::1 at 2015-09-09 19:56:32 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered hospitals/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 333ms (Views: 164.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/custom.self-d12747deb62b7e3be863228b7904e2af6ada0acf108d0423e6eda66779fbcf34.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/hospitals.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/static_pages.self-9d3bdddd27a6a877a95d2062d994bc2cdb5070707453ec9fe2467ab8e97e2c81.css?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for ::1 at 2015-09-09 19:56:33 +0900
