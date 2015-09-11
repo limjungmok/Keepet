@@ -30,6 +30,7 @@ class HospitalsController < ApplicationController
 	end
 
 	def show
+		@hospital = Hospital.find(params[:id])
 	end
 
 	def index
