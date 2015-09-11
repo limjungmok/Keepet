@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  get    'map'     => 'static_pages#map'
+  get    'h_create'=> 'hospitals#new'
+  get    'map'     => 'hospitals#map'
 
   resources :users
   resources :hospitals
