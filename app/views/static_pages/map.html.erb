@@ -37,7 +37,7 @@
 
 
         var oPoint = new nhn.api.map.LatLng(latitude, longitude);
-        nhn.api.map  .setDefaultPoint('LatLng');
+        nhn.api.map.setDefaultPoint('LatLng');
         oMap = new nhn.api.map.Map('testMap' ,{
                 point : oPoint,
                 zoom : 10,
@@ -51,6 +51,8 @@
                 size : new nhn.api.map.Size(855, 840)
         });
 
+        mapTypeChangeButton = new nhn.api.map.MapTypeBtn(); // - 지도 타입 버튼 선언
+        oMap.addControl(mapTypeChangeButton); // 타입 변경 버튼 추가  
         // 줌 컨트롤러
         var oSlider = new nhn.api.map.ZoomControl();
         oMap.addControl(oSlider);
@@ -92,30 +94,15 @@
         });
 
 
-        oMap.attach('mouseenter', function(oCustomEvent) {
-                var oTarget = oCustomEvent.target;
-                // 마커위에 마우스 올라간거면
-                if (oTarget instanceof nhn.api.map.Marker) {
-                        var oMarker = oTarget;
-                        oLabel.setVisible(true, oMarker); // - 특정 마커를 지정하여 해당 마커의 title을 보여준다.
-                }
-        });
-
-        oMap.attach('mouseleave', function(oCustomEvent) {
-                var oTarget = oCustomEvent.target;
-                // 마커위에서 마우스 나간거면
-                if (oTarget instanceof nhn.api.map.Marker) {
-                        oLabel.setVisible(false);
-                }
-        });
-        
-
         oMap.attach('click', function(oCustomEvent) {
-                var oPoint = oCustomEvent.point;
+                oPoint = oCustomEvent.point;
                 var oTarget = oCustomEvent.target;
                 mapInfoTestWindow.setVisible(false);
                 // 마커 클릭하면
                 if (oTarget instanceof nhn.api.map.Marker) {
+                        // 마커 클릭시 지도 중앙에 배치하기
+                        oMap.setCenter(oPoint);
+
                         // 겹침 마커 클릭한거면
                         if (oCustomEvent.clickCoveredMarker) {
                                 return;
@@ -132,9 +119,10 @@
                         mapInfoTestWindow.setVisible(true);
                         mapInfoTestWindow.setPosition({right : 15, top : 30});
                         mapInfoTestWindow.autoPosition();
+
                         return;
                 }
-
+                
                 //아무 곳이나 클릭하면 마커가 새로 생성
                 /*
                 var oMarker = new nhn.api.map.Marker(oIcon, { title : '마커 : ' + oPoint.toString() });
@@ -150,6 +138,7 @@
     </div>
 
     <div class = "col-xs-3">
+
         <div id = "h_index">
                 <div id = "h_body">
                     <div id = "h_name">
