@@ -71,10 +71,8 @@
         oLabel1.setVisible(true, oMarker);// 마커 라  벨 보이기 
 
         //여러개의 마커(동물병원) 표시를 위한 반복문
-        for (i = 0; i < 5; i++) {
-            test1 = 37.5473148 + i;
-            test2 = 127.0733127 + i;
-            var oPoint1 = new nhn.api.map.LatLng(test1, test2); //마커(동물병원) 위치
+        for (i = 0; i < <%=@hospital_count %>; i++) {
+            var oPoint1 = new nhn.api.map.LatLng(<%=@test1%>, <%=@test2%>); //마커(동물병원) 위치
             var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ i });  //마커 생성 
             oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
             oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
@@ -138,21 +136,26 @@
     </div>
 
     <div class = "col-xs-3">
-            <div id = "h_index">
+        <% @hospitals.each do |h| %>
+            <a href = "/hospital/show/<%= h.id %>">
+                <div id = "h_index">
                     <div id = "h_body">
                         <div id = "h_name">
+                            <%= h.h_name %>
                         </div>
 
                         <div id = "h_address">
-                            "세종대 근처"
+                            <%= h.h_address %>
                         </div>
 
                         <div id = "h_phone">
-                            "000-0000"
+                            <%= h.h_phone %>
                         </div>
                     </div>
                     <br>
-            </div>
+                </div>
+            </a>
+        <% end %>
     </div>
     
 

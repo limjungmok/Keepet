@@ -16,7 +16,16 @@ class HospitalsController < ApplicationController
 	end
 
 	def map
-		@hospital = Hospital.all
+		@hospitals = Hospital.all
+
+		@hospital_count = 0
+
+		@hospitals.each do |h|
+			@hospital_count = @hospital_count + 1;
+	    end
+
+		@test1 = 37.5473148
+		@test2 = 127.0733127
 	end
 
 	def create
