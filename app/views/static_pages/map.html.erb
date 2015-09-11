@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_US" xml:lang="en_US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+        
+        <title>OpenAPI 2.0 - 지도 생성</title>
+        
+        <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=bf2fe1928443532202b21b99e4866334"></script>
+    </head>
+
+    
+ 
+    <script type="text/javascript">
+    
+        function myLocation() {
+                        /* 객체가 존재하면 */
+                        if ( navigator.geolocation )
+                        {
+                        /* getCurrentPostion 메서드를 호출 ( 위치를 가져오는 핸들러함수를 파라미터로 ) */  
+                            navigator.geolocation.getCurrentPosition( successHandler );
+                        }
+                        else          
+                        {
+                            alert("not support geolocation");
+                        }
+                    }
+               
+        /* 위치정보를 가져오는 사용자정의 핸들러함수 */
+        function successHandler( position ) {
+            latitude = position.coords.latitude; 
+            longitude = position.coords.longitude;  
+        }
+
+        window.onload = myLocation;
+
+
+        var oPoint = new nhn.api.map.LatLng(latitude, longitude);
+        nhn.api.map  .setDefaultPoint('LatLng');
+        oMap = new nhn.api.map.Map('testMap' ,{
+                point : oPoint,
+                zoom : 10,
+                enableWheelZoom : true,
+                enableDragPan : true,
+                enableDblClickZoom : false,
+                mapMode : 0,
+                activateTrafficMap : false,
+                activateBicycleMap : false,
+                minMaxLevel : [ 1, 14 ],
+                size : new nhn.api.map.Size(855, 840)
+        });
+
+        // 줌 컨트롤러
+        var oSlider = new nhn.api.map.ZoomControl();
+        oMap.addControl(oSlider);
+        oSlider.setPosition({ top:15, left:15 });
+        //아래는 위에서 지정한 좌표에 마커를 표시하는 소스 입니다.
+        var oSize = new nhn.api.map.Size(28, 37);
+        var oOffset = new nhn.api.map.Size(14, 37);
+        var oIcon = new nhn.api.map.Icon('http://static.naver.com/maps2/icons/pin_spot2.png', oSize, oOffset);
+        //icon 이미지를 바꿔서 사용할 수 있습니다.
+        var oMarker = new nhn.api.map.Marker(oIcon, { title : '현재위치' }); 
+        oMarker.setPoint(oPoint);
+        oMap.addOverlay(oMarker);
+        // 마커라벨 표시
+        var oLabel1 = new nhn.api.map.MarkerLabel(); // 마커 라벨 선언
+        oMap.addOverlay(oLabel1);// 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨
+        oLabel1.setVisible(true, oMarker);// 마커 라  벨 보이기 
+
+        //여러개의 마커(동물병원) 표시를 위한 반복문
+        for (i = 0; i < 5; i++) {
+            test1 = 37.5473148 + i;
+            test2 = 127.0733127 + i;
+            var oPoint1 = new nhn.api.map.LatLng(test1, test2); //마커(동물병원) 위치
+            var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ i });  //마커 생성 
+            oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
+            oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
+            var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
+            oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
+            oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기 
+        }
+
+        var mapInfoTestWindow = new nhn.api.map.InfoWindow(); // - info window 생성
+        mapInfoTestWindow.setVisible(false); // - infowindow 표시 여부 지정.
+        oMap.addOverlay(mapInfoTestWindow);     // - 지도에 추가.
+
+        mapInfoTestWindow.attach('changeVisible', function(oCustomEvent) {
+                if (oCustomEvent.visible) {
+                        oLabel.setVisible(false);
+                }
+        });
+
+
+        oMap.attach('mouseenter', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에 마우스 올라간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        var oMarker = oTarget;
+                        oLabel.setVisible(true, oMarker); // - 특정 마커를 지정하여 해당 마커의 title을 보여준다.
+                }
+        });
+
+        oMap.attach('mouseleave', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에서 마우스 나간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        oLabel.setVisible(false);
+                }
+        });
+        
+
+        oMap.attach('click', function(oCustomEvent) {
+                var oPoint = oCustomEvent.point;
+                var oTarget = oCustomEvent.target;
+                mapInfoTestWindow.setVisible(false);
+                // 마커 클릭하면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        // 겹침 마커 클릭한거면
+                        if (oCustomEvent.clickCoveredMarker) {
+                                return;
+                        }
+                        // - InfoWindow 에 들어갈 내용은 setContent 로 자유롭게 넣을 수 있습니다. 외부 css를 이용할 수 있으며, 
+                        // - 외부 css에 선언된 class를 이용하면 해당 class의 스타일을 바로 적용할 수 있습니다.
+                        // - 단, DIV 의 position style 은 absolute 가 되면 안되며, 
+                        // - absolute 의 경우 autoPosition 이 동작하지 않습니다. 
+                        mapInfoTestWindow.setContent('<DIV style="border-top:1px solid; border-bottom:2px groove black; border-left:1px solid; border-right:2px groove black;margin-bottom:1px;color:black;background-color:white; width:auto; height:auto;">'+
+                        '<span style="color: #000000 !important;display: inline-block;font-size: 12px !important;font-weight: bold !important;letter-spacing: -1px !important;white-space: nowrap !important; padding: 2px 2px 2px 2px !important">' + 
+                        'Hello World <br /> ' + oTarget.getPoint()
+                        +'<span></div>');
+                        mapInfoTestWindow.setPoint(oTarget.getPoint());
+                        mapInfoTestWindow.setVisible(true);
+                        mapInfoTestWindow.setPosition({right : 15, top : 30});
+                        mapInfoTestWindow.autoPosition();
+                        return;
+                }
+
+                //아무 곳이나 클릭하면 마커가 새로 생성
+                /*
+                var oMarker = new nhn.api.map.Marker(oIcon, { title : '마커 : ' + oPoint.toString() });
+                oMarker.setPoint(oPoint);
+                oMap.addOverlay(oMarker);
+                */
+        });
+       
+    </script>
+
+    <div class = "col-xs-9">
+        <div id = "testMap"></div>
+    </div>
+
+    <div class = "col-xs-3">
+        <div id = "h_index">
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>                
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+                <br>
+
+                <div id = "h_body">
+                    <div id = "h_name">
+                        "피카소 동물병원"
+                    </div>
+
+                    <div id = "h_address">
+                        "세종대 근처"
+                    </div>
+
+                    <div id = "h_phone">
+                        "000-0000"
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    
+
+</html>
