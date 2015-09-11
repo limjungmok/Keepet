@@ -10,7 +10,25 @@ body{
 	padding-top: 50px;
 }
 
-#testMap {
-	width:50%; 
-	height:100%;
+.col-xs-9{
+	padding-right: 0px;
+	padding-left: 0px;
 }
+.col-xs-3{
+	padding: 1em;
+	background-color: lightgrey;
+	height: 840px;
+	overflow-y: auto;
+	
+}
+::-webkit-scrollbar{
+		display: none;
+}
+
+#h_body {
+	background-color: white;
+}
+
+#h_index{
+}
+

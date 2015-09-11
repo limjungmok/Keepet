@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+
+  get    'map'     => 'static_pages#map'
+
   resources :users
   resources :hospitals
   resources :reservations
