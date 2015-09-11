@@ -5,9 +5,25 @@ require 'net/http'
 require 'httparty'
 
 class HospitalsController < ApplicationController
+	before_action :map
 
 	def new
+		service_key_gangnam = "70554f5a78636e643739784d584f62"
 		
+		#동물병원 API
+		get_json(service_key_gangnam)
+		#동물병원 주소 -> x,y API
+		#get_json_location(nhn_service_key)
+	end
+
+	def map
+		@hospitals = Hospital.all
+
+		#총 동물병원 수 = @hospital_count
+		@hospital_count = 0
+		@hospitals.each do |h|
+			@hospital_count = @hospital_count + 1;
+	    end
 	end
 
 	def create
@@ -29,7 +45,7 @@ class HospitalsController < ApplicationController
 
 	def destroy
 	end
-	
+
 	def get_json(get_service_key)
 		#JSON  타입
 		type="/json/"
@@ -57,9 +73,9 @@ class HospitalsController < ApplicationController
 	    	get_json_location(hospital.h_address)
 	    	
 	    	@hospital_location.each do |loc|
-	    		if(@userquery.in? hospital.h_address)
-	    		hospital.h_latitude = loc["point"]["y"]
-	    		
+
+	    		if((@userquery.to_s).in? hospital.h_address)
+	    		hospital.h_latitude = loc["point"]["y"]	    		
 	    		hospital.h_lontitude = loc["point"]["x"]
 	    		hospital.save
 	    		
@@ -79,6 +95,12 @@ class HospitalsController < ApplicationController
 	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"] unless JSON.parse(@response_location.body)["result"].nil?
 	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
 	end
+
+	private	
+	def refresh_map
+		redirect_to signup_path
+	end
+
 end
 
 

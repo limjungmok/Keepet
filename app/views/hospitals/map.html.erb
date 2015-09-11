@@ -35,7 +35,6 @@
 
         window.onload = myLocation;
 
-
         var oPoint = new nhn.api.map.LatLng(latitude, longitude);
         nhn.api.map.setDefaultPoint('LatLng');
         oMap = new nhn.api.map.Map('testMap' ,{
@@ -70,11 +69,10 @@
         oMap.addOverlay(oLabel1);// 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨
         oLabel1.setVisible(true, oMarker);// 마커 라  벨 보이기 
 
+        
         //여러개의 마커(동물병원) 표시를 위한 반복문
-        for (i = 0; i < 5; i++) {
-            test1 = 37.5473148 + i;
-            test2 = 127.0733127 + i;
-            var oPoint1 = new nhn.api.map.LatLng(test1, test2); //마커(동물병원) 위치
+        for (i = 0; i < <%= @hospital_count %>; i++) {
+            var oPoint1 = new nhn.api.map.LatLng(<%= @hospitals.find(1).h_latitude %>, <%= @hospitals.find(1).h_lontitude %>); //마커(동물병원) 위치
             var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ i });  //마커 생성 
             oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
             oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
@@ -139,7 +137,7 @@
 
     <div class = "col-xs-3">
         <% @hospitals.each do |h| %>
-            <a href = "/hospitals/<%= h.id %>">
+            <a href = "/hospital/show/<%= h.id %>">
                 <div id = "h_index">
                     <div id = "h_body">
                         <div id = "h_name">
