@@ -14,10 +14,11 @@ class HospitalsController < ApplicationController
 	end
 
 	def show
-		
+		@hospital = Hospital.find(params[:id])
 	end
 
 	def index
+		@hospitals = Hospital.all
 	end
 
 	def edit
@@ -28,8 +29,56 @@ class HospitalsController < ApplicationController
 
 	def destroy
 	end
-
 	
+	def get_json(get_service_key)
+		#JSON  타입
+		type="/json/"
+		#찾으려는 위치
+		search_location = "gangnam"
+		#서비스키
+		service_key = get_service_key
+		#병원이 속한 시/구
+		location_hospital = "Gn"
+		#기본 URL
+		base_url = "http://openapi."+search_location+
+					".go.kr:8088/"+service_key+type+location_hospital+
+					"AnimalHospital/1/1000"
+		#JSON객체를 받음
+	    @response = HTTParty.get(base_url)
+	    #객체를 쪼갠다.몸통 -> GnAnimalHospital 객체 -> row 배열
+	    @hospital = JSON.parse(@response.body)["GnAnimalHospital"]["row"]
+
+	    #배열을 전부 돌린다. 동시에 DB에 저장해준다.
+	    #돌릴때, 반환되는 주소를 가지고 x,y값을 찾도록 한다.
+
+	    @hospital.each do |h|
+	    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
+
+	    	get_json_location(hospital.h_address)
+	    	
+	    	@hospital_location.each do |loc|
+	    		if(@userquery.in? hospital.h_address)
+	    		hospital.h_latitude = loc["point"]["y"]
+	    		
+	    		hospital.h_lontitude = loc["point"]["x"]
+	    		hospital.save
+	    		
+	    		end
+	    	end
+
+	    	hospital.save
+	    end
+	end
+
+	def get_json_location(location)
+		base_url = "http://openapi.map.naver.com/api/geocode?key=7abf142941432839aa8e17eeef6181b7&encoding=utf-8&coord=latlng&output=json&query="+location
+		
+		safeurl = URI.encode(base_url.strip)
+
+		@response_location = HTTParty.get(safeurl)
+	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"] unless JSON.parse(@response_location.body)["result"].nil?
+	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
+	end
 end
 
 
