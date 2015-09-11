@@ -5,6 +5,7 @@ require 'net/http'
 require 'httparty'
 
 class HospitalsController < ApplicationController
+	before_action :map
 
 	def new
 		service_key_gangnam = "70554f5a78636e643739784d584f62"
@@ -18,14 +19,11 @@ class HospitalsController < ApplicationController
 	def map
 		@hospitals = Hospital.all
 
+		#총 동물병원 수 = @hospital_count
 		@hospital_count = 0
-
 		@hospitals.each do |h|
 			@hospital_count = @hospital_count + 1;
 	    end
-
-		@test1 = 37.5473148
-		@test2 = 127.0733127
 	end
 
 	def create
@@ -48,7 +46,6 @@ class HospitalsController < ApplicationController
 
 
 	def get_json(get_service_key)
-		nhn_service_key = "7abf142941432839aa8e17eeef6181b7"
 		#JSON  타입
 		type="/json/"
 		#찾으려는 위치
@@ -72,11 +69,15 @@ class HospitalsController < ApplicationController
 	    @hospital.each do |h|
 	    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
 
-	    	get_json_location(nhn_service_key)
+	    	get_json_location(hospital.h_address)
+	    	
 	    	@hospital_location.each do |loc|
-	    		if(loc["address"] == hospital.h_address)
+	    		if((@userquery.to_s).in? hospital.h_address)
 	    		hospital.h_latitude = loc["point"]["y"]
+	    		
 	    		hospital.h_lontitude = loc["point"]["x"]
+	    		hospital.save
+	    		
 	    		end
 	    	end
 
@@ -84,13 +85,21 @@ class HospitalsController < ApplicationController
 	    end
 	end
 
-	def get_json_location(get_service_key)
-		service_key = get_service_key
-		base_url = "http://openapi.map.naver.com/api/geocode?key="+service_key+"&encoding=utf-8&coord=latlng&output=json&query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B0%95%EB%82%A8%EA%B5%AC%20%EC%8B%A0%EC%82%AC%EB%8F%99%20587%EB%B2%88%EC%A7%80%2013%ED%98%B8%20%EC%A7%80%ED%95%98%201%EC%B8%B5"
+	def get_json_location(location)
+		base_url = "http://openapi.map.naver.com/api/geocode?key=7abf142941432839aa8e17eeef6181b7&encoding=utf-8&coord=latlng&output=json&query="+location
 		
-		@response_location = HTTParty.get(base_url)
-	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"]
+		safeurl = URI.encode(base_url.strip)
+
+		@response_location = HTTParty.get(safeurl)
+	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"] unless JSON.parse(@response_location.body)["result"].nil?
+	    @userquery = JSON.parse(@response_location.body)["result"]["user query"] unless JSON.parse(@response_location.body)["result"].nil?
 	end
+
+	private	
+	def refresh_map
+		redirect_to signup_path
+	end
+
 end
 
 
