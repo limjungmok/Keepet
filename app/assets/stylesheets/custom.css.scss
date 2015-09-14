@@ -14,7 +14,6 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
 }
 
 section {
@@ -202,3 +201,62 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+
+/*정목*/
+
+#hospital_info{
+  width: 1000px;
+  height:300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  border-color: #000;
+}
+
+#hospital_album{
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+  background-color: #ccc;
+}
+
+#hospital_detail{
+  width: 680px;
+  height: 280px;
+  margin: 10px;
+  padding-top: 20px;
+  padding-left: 20px; 
+  background-color: whitesmoke;
+  color: #aaa;
+}
+
+#hospital_detail_name{
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+}
+#hospital_detail_address{
+  font-size: 16px;
+}
+#hospital_detail_phone{
+  font-size: 16px;
+}
+
+#hospital_option{
+  width: 1000px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+}
+
+/*요한*/
+
+/*지연*/
+
+
+
+

@@ -1,7 +1,22 @@
-	병원명 : <%=@hospital.h_name %><br>
-	병원주소 : <%=@hospital.h_address %><br>
-	병원번호 : <%=@hospital.h_phone %><br>
-	x : <%=@hospital.h_latitude %><br>
-	y : <%=@hospital.h_lontitude %><br>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
 
-<hr>
+	<div class="row", id="hospital_info">
+	  <div class="col-md-4", id="hospital_album">
+
+	  </div>
+	  <div class="col-md-8", id="hospital_detail">
+		<div id="hospital_detail_name"><%=@hospital.h_name %></div><br>
+		<div id="hospital_detail_address">병원주소 : <%=@hospital.h_address %></div>
+		<div id="hospital_detail_phone">병원번호 : <%=@hospital.h_phone %></div><br>
+		
+	  </div>
+	</div>
+
+	<div id="hospital_option">
+	</div>
+</body>
+</html>
