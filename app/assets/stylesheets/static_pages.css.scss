@@ -7,10 +7,32 @@
 }
 
 body{
-	padding-top: 50px;
+	padding-top: 0px;
 }
 
-#testMap {
-	width:50%; 
-	height:100%;
+.col-xs-9{
+	padding-right: 0px;
+	padding-left: 0px;
 }
+.col-xs-3{
+	padding: 1em;
+	background-color: lightgrey;
+	height: 840px;
+	overflow-y: auto;
+	
+}
+::-webkit-scrollbar{
+		display: none;
+}
+
+#h_name {
+	max-width: 	257px;	
+}
+
+#h_body {
+	background-color: white;
+}
+
+#h_index{
+}
+

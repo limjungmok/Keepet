@@ -18,7 +18,7 @@ gem 'sdoc',                    '0.4.0', group: :doc
 gem 'nokogiri'
 gem 'roo'
 gem "httparty"
-
+gem "simple_calendar", "~> 2.0"
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

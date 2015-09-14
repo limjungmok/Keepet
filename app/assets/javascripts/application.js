@@ -16,24 +16,3 @@
 //= require turbolinks
 //= require_tree .
 
-function myLocation() {
-                /* 객체가 존재하면 */
-                if ( navigator.geolocation )
-                {
-                /* getCurrentPostion 메서드를 호출 ( 위치를 가져오는 핸들러함수를 파라미터로 ) */  
-                    navigator.geolocation.getCurrentPosition( successHandler );
-                }
-                else          
-                {
-                    alert("not support geolocation");
-                }
-            }
-       
-/* 위치정보를 가져오는 사용자정의 핸들러함수 */
-function successHandler( position ) {
-    latitude = position.coords.latitude; 
-    longitude = position.coords.longitude;  
-}
-
-window.onload = myLocation;
-
