@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :hospitals
-  resources :reservations
-  resources :talks
+  #resources :reservations
+  #resources :talks
+  resources :meetings
     
 end

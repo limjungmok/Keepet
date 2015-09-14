@@ -11,8 +11,19 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-/* universal */
+/* 네비게이션바 */
 
+.navbar-inverse{
+  background-color: #66ccb9;
+  border-color: transparent;
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  color: #222;
+}
 body {
 }
 
@@ -31,29 +42,6 @@ textarea {
   }
 }
 
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
-}
-
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -66,12 +54,11 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  margin-top: 10px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #222;
     text-decoration: none;
   }
 }
@@ -110,34 +97,6 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
-}
-
-/* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
 }
 
 .gravatar {
@@ -210,17 +169,20 @@ input {
   height:300px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: whitesmoke;
   border-color: #000;
+  img{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
 #hospital_album{
-  width: 280px;
-  height: 280px;
-  margin: 10px;
-  background-color: #ccc;
+  width: 300px;
+  height: 300px;
+
 }
 
 #hospital_detail{
@@ -231,6 +193,8 @@ input {
   padding-left: 20px; 
   background-color: whitesmoke;
   color: #aaa;
+  font-weight: lighter;
+
 }
 
 #hospital_detail_name{
@@ -247,12 +211,141 @@ input {
 
 #hospital_option{
   width: 1000px;
-  height: 800px;
+  height: 1000px;
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
 }
+/* Calendar */
 
+#select{
+  width: 1000px;
+  height: 50px;
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-left: 10px;  
+}
+
+#select_calendar{
+  height: 50px;
+  display: inline;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#select_question{
+  height: 50px;
+  display: inline;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#select_review{
+  height: 50px;
+  display: inline;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;  
+}
+
+.simple-calendar{
+  text-align: center;
+  margin-top: 50px;
+  width: 900px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #222;
+  .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td{
+    text-align:center;
+    background-color: #ccc;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .table{
+    margin-top: 30px;
+    background-color: #fff;
+  }
+  .day{
+    text-align: left;
+  }
+  .wday-0 {
+    /*SUN*/
+    color: #ED6A43;
+  }
+  .wday-6 {
+    /*SAT*/
+    color: #0086B3;
+  }
+  .today {}
+  .past {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .future {}
+  .prev-month {
+    font-size: 16px;
+  }
+  .next-month {
+    font-size: 16px;
+   }
+  .current-month {
+    font-size: 16px;
+  }
+  .start-date {
+    color: #66ccb9;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .has-events {
+  }
+  #meeting_title{
+    font-size: 16px;
+  }
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
+  width: 125px;
+  max-width: 125px;
+  height: 125px;
+  max-height: 125px;
+  display: inline-block;
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+  width: 125px;
+  max-width: 125px;
+  height: 125px;
+  max-height: 125px;
+  display: inline-block;
+}
+.simple-calendar .table > caption + thead > tr:first-child > th, .simple-calendar .table > caption + thead > tr:first-child > td, .simple-calendar .table > colgroup + thead > tr:first-child > th, .simple-calendar .table > colgroup + thead > tr:first-child > td, .simple-calendar .table > thead:first-child > tr:first-child > th, .simple-calendar .table > thead:first-child > tr:first-child > td{
+  height: 40px;
+}
+#meeting_title{
+  color: #222;
+  font-weight: 400;
+  font-size: 16px;
+}
+#reservation{
+  margin-top: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  #btn_reservation{
+    background-color:#66ccb9;
+    color: #fff;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+  }
+}
 /*요한*/
 
 /*지연*/
