@@ -18,15 +18,22 @@
 
     //지도를 미리 생성
     var map = new daum.maps.Map(mapContainer, mapOption);
+
     //주소-좌표 변환 객체를 생성
     var geocoder = new daum.maps.services.Geocoder();
+
     //마커를 미리 생성
     var marker = new daum.maps.Marker({
     	position: new daum.maps.LatLng(37.537187, 127.005476),
     	map: map
     });
 
-
+    //검색창에 엔터 입력시 좌표 검색
+                $("#sample5_address").keydown(function(e) {
+                    if (e.keyCode == 13) {
+                        Search();
+                    }
+                });
 
     function sample5_execDaumPostcode() {
     	new daum.Postcode({
@@ -52,6 +59,7 @@
 
                 // 주소 정보를 해당 필드에 넣는다.
                 document.getElementById("sample5_address").value = fullAddr;
+
                 // 주소로 좌표를 검색
                 geocoder.addr2coord(data.address, function(status, result) {
                     // 정상적으로 검색이 완료됐으면
@@ -66,6 +74,8 @@
                         // 마커를 결과값으로 받은 위치로 옮긴다.
                         marker.setPosition(coords)
                     }
+
+                    $("#latlng").html((result.addr[0].lat).toString().substring(0, 10) + ", " + (result.addr[0].lng).toString().substring(0, 10));
                 });
             }
         }).open();
@@ -79,4 +89,6 @@
     	oScript.src = "http://apis.daum.net/local/geo/addr2coord?apikey=&output=json&callback=pongSearch&q=" + encodeURI(query);
     	document.getElementsByTagName("head")[0].appendChild(oScript);
     }
+
+    
 </script>
