@@ -8,7 +8,7 @@
 <div id="map" style="width:1150px;height:600px;margin-top:10px;display:none"></div>
 
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script src="//apis.daum.net/maps/maps3.js?apikey=&libraries=services"></script>
+<script src="//apis.daum.net/maps/maps3.js?apikey=f8ab409992af7eadee3762524f2b1f44&libraries=services"></script>
 <script>
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
@@ -76,7 +76,7 @@
     	var oScript = document.createElement("script");
     	oScript.type = "text/javascript";
     	oScript.charset = "utf-8";
-    	oScript.src = "http://apis.daum.net/local/geo/addr2coord?apikey=&output=json&callback=pongSearch&q=" + encodeURI(query);
+    	oScript.src = "http://apis.daum.net/local/geo/addr2coord?apikey=f8ab409992af7eadee3762524f2b1f44&output=json&callback=pongSearch&q=" + encodeURI(query);
     	document.getElementsByTagName("head")[0].appendChild(oScript);
     }
 </script>
