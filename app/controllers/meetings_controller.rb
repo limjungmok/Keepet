@@ -14,7 +14,8 @@ class MeetingsController < ApplicationController
 
   # GET /meetings/new
   def new
-    @meeting = Meeting.new
+    @hospital = Hospital.find(params[:hospital_id])    
+    @meeting = @hospital.meetings.build
   end
 
   # GET /meetings/1/edit
@@ -24,11 +25,12 @@ class MeetingsController < ApplicationController
   # POST /meetings
   # POST /meetings.json
   def create
-    @meeting = Meeting.new(meeting_params)
-
+    @hospital = Hospital.find(params[:hospital_id])
+    @meeting = @hospital.meetings.build(meeting_params)
     respond_to do |format|
       if @meeting.save
-        format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
+        flash[:success] = "예약 성공"
+        format.html { redirect_to @hospital}
         format.json { render :show, status: :created, location: @meeting }
       else
         format.html { render :new }

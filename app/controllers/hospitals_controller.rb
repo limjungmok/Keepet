@@ -31,7 +31,8 @@ class HospitalsController < ApplicationController
 
 	def show
 		@hospital = Hospital.find(params[:id])
-		@meetings = Meeting.all
+		#@meetings = Meeting.all
+		@meetings = @hospital.meetings.all
 		
 	end
 

@@ -13,9 +13,10 @@ Rails.application.routes.draw do
   get    'map'     => 'hospitals#map'
 
   resources :users
-  resources :hospitals
+  resources :hospitals do 
+    resources :meetings
+  end
   #resources :reservations
   #resources :talks
-  resources :meetings
     
 end
