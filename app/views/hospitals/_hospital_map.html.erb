@@ -99,28 +99,24 @@
                 }
             });
 
-        }
+            //맵에서 병원 위치 보이기 
+            var mapInfoTestWindow = new nhn.api.map.InfoWindow(); // - info window 생성
+            mapInfoTestWindow.setVisible(false); // - infowindow 표시 여부 지정.
+            oMap.addOverlay(mapInfoTestWindow);     // - 지도에 추가.
+
+            mapInfoTestWindow.attach('changeVisible', function(oCustomEvent) {
+                    if (oCustomEvent.visible) {
+                            oLabel.setVisible(false);
+                    }
+            });
 
 
-        /*
-        //맵에서 병원 위치 보이기 
-        var mapInfoTestWindow = new nhn.api.map.InfoWindow(); // - info window 생성
-        mapInfoTestWindow.setVisible(false); // - infowindow 표시 여부 지정.
-        oMap.addOverlay(mapInfoTestWindow);     // - 지도에 추가.
-
-        mapInfoTestWindow.attach('changeVisible', function(oCustomEvent) {
-                if (oCustomEvent.visible) {
-                        oLabel.setVisible(false);
-                }
-        });
-
-
-        oMap.attach('click', function(oCustomEvent) {
-            oPoint = oCustomEvent.point;
-            var oTarget = oCustomEvent.target;
-            mapInfoTestWindow.setVisible(false);
-            // 마커 클릭하면
-            if (oTarget instanceof nhn.api.map.Marker) {
+            oMap.attach('click', function(oCustomEvent) {
+                oPoint = oCustomEvent.point;
+                var oTarget = oCustomEvent.target;
+                mapInfoTestWindow.setVisible(false);
+                // 마커 클릭하면
+                if (oTarget instanceof nhn.api.map.Marker) {
                     // 마커 클릭시 지도 중앙에 배치하기
                     oMap.setCenter(oPoint);
 
@@ -128,24 +124,30 @@
                     if (oCustomEvent.clickCoveredMarker) {
                             return;
                     }
+                    
                     // - InfoWindow 에 들어갈 내용은 setContent 로 자유롭게 넣을 수 있습니다. 외부 css를 이용할 수 있으며, 
                     // - 외부 css에 선언된 class를 이용하면 해당 class의 스타일을 바로 적용할 수 있습니다.
                     // - 단, DIV 의 position style 은 absolute 가 되면 안되며, 
                     // - absolute 의 경우 autoPosition 이 동작하지 않습니다. 
-                    mapInfoTestWindow.setContent('<DIV style="border-top:1px solid; border-bottom:2px groove black; border-left:1px solid; border-right:2px groove black;margin-bottom:1px;color:black;background-color:white; width:auto; height:auto;">'+
+                    mapInfoTestWindow.setContent('<DIV style="color:#ffffff; border-radius:5px;   padding:10px; color:black; background-color:white; width:auto; height:auto;">' +
                     '<span style="color: #000000 !important;display: inline-block;font-size: 12px !important;font-weight: bold !important;letter-spacing: -1px !important;white-space: nowrap !important; padding: 2px 2px 2px 2px !important">' + 
                     'Hello World <br /> ' + oTarget.getPoint()
-                    +'<span></div>');
+                    +'<span></div>' + '<div style="left:50%; margin-left:-18px; border-right :18px solid transparent; border-top:18px solid #ffffff;  border-left : 18px solid transparent; position:absolute; bottom:-18px; width:0; height:0;"></div>');
                     mapInfoTestWindow.setPoint(oTarget.getPoint());
                     mapInfoTestWindow.setVisible(true);
                     mapInfoTestWindow.setPosition({right : 15, top : 30});
                     mapInfoTestWindow.autoPosition();
 
                     return;
-            }
-        });
+                }
+            });
+        }
 
 
+        
+        
+
+        /*
         //아무 곳이나 클릭하면 마커가 새로 생성
         var oMarker = new nhn.api.map.Marker(oIcon, { title : '마커 : ' + oPoint.toString() });
         oMarker.setPoint(oPoint);
