@@ -3,7 +3,6 @@
     <%= link_to "Keepet", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
         <li><%= link_to "Hospital Create",  h_create_path, data: { confirm: 'Are you sure?' } %></li>
 
         <% if logged_in? %>

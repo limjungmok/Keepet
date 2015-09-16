@@ -1,7 +1,5 @@
 class Hospital < ActiveRecord::Base
-	has_many :albums
-	has_many :reservations
-	has_many :talks
+	has_many :meetings
 
 	validates :h_name, uniqueness: true
 end

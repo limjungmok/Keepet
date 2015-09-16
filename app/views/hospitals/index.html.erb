@@ -1,11 +1,26 @@
-<% @hospitals.each do|h| %>
+<div class = "col-xs-9">
+	<%= render 'hospitals/hospital_map' %>
+</div>
 
-병원명 : <%=h.h_name %><br>
-병원주소 : <%=h.h_address %><br>
-병원번호 : <%=h.h_phone %><br>
-x : <%=h.h_latitude %><br>
-y : <%=h.h_lontitude %><br>
+<div class = "col-xs-3">
+    <% @hospitals.each do |h| %>
+        <a href = "/hospitals/<%= h.id %>">
+            <div id = "h_index">
+                <div id = "h_body">
+                    <div id = "h_name">
+                        <%= h.h_name %>
+                    </div>
 
-<hr>
+                    <div id = "h_address">
+                        <%= h.h_address %>
+                    </div>
 
-<% end %>
+                    <div id = "h_phone">
+                        <%= h.h_phone %>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </a>
+    <% end %>
+</div>

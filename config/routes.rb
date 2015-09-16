@@ -10,12 +10,12 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
   get    'h_create'=> 'hospitals#new'
-  get    'map'     => 'hospitals#map'
 
   resources :users
-  resources :hospitals
+  resources :hospitals do 
+    resources :meetings
+  end
   #resources :reservations
   #resources :talks
-  resources :meetings
     
 end

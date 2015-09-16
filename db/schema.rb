@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150914025103) do
+ActiveRecord::Schema.define(version: 20150915100618) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "a_photo"
@@ -29,17 +29,19 @@ ActiveRecord::Schema.define(version: 20150914025103) do
     t.boolean  "h_walking"
     t.string   "h_time"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.float    "h_latitude"
     t.float    "h_lontitude"
+    t.integer  "count",       default: 0
   end
 
   create_table "meetings", force: :cascade do |t|
     t.string   "name"
     t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "hospital_id"
   end
 
   create_table "reservations", force: :cascade do |t|
