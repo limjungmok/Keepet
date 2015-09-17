@@ -25,7 +25,6 @@
             {
             // getCurrentPostion 메서드를 호출 ( 위치를 가져오는 핸들러함수를 파라미터로 )  
                 navigator.geolocation.getCurrentPosition( showMap );
-
             }
             else          
             {
@@ -72,16 +71,44 @@
             oLabel1.setVisible(true, oMarker);// 마커 라벨 보이기 
 
             //여러개의 마커(동물병원) 표시를 위한 반복문
-            for (i = 0; i < <%= @hospital_count %>; i++) {
+            //for (i = 0; i < <%= @hospital_count %>; i++) {
                 var oPoint1 = new nhn.api.map.LatLng(<%= @hospitals.find(1).h_latitude %>, <%= @hospitals.find(1).h_lontitude %>); //마커(동물병원) 위치
-                var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ i });  //마커 생성 
+                var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ 1 });  //마커 생성 
                 oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
                 oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
                 var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
                 oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
                 oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기
-            }
+
+
+                var oPoint2 = new nhn.api.map.LatLng(<%= @hospitals.find(3).h_latitude %>, <%= @hospitals.find(3).h_lontitude %>); //마커(동물병원) 위치
+                var oMarker2 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ 2 });  //마커 생성 
+                oMarker2.setPoint(oPoint2); //마커 표시할 좌표 선택
+                oMap.addOverlay(oMarker2); //마커를 지도위에 표현 
+                var oLabel2 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
+                oMap.addOverlay(oLabel2); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
+                oLabel2.setVisible(true, oMarker2); // 마커 라벨 보이기
+            //}
             
+            oMap.attach('mouseenter', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에 마우스 올라간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                    var oMarker = oTarget;
+                    oLabel1.setVisible(true, oMarker); // - 특정 마커를 지정하여 해당 마커의 title을 보여준다.
+                    oLabel2.setVisible(true, oMarker);
+                }
+            });
+
+            oMap.attach('mouseleave', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에서 마우스 나간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                    oLabel1.setVisible(false);
+                    oLabel2.setVisible(false);
+                }
+            });
+
             // 마커 클릭시 지도 중앙에 배치하기
             oMap.attach('click', function(oCustomEvent) {
             oPoint = oCustomEvent.point;
@@ -122,7 +149,7 @@
 
                     // 겹침 마커 클릭한거면
                     if (oCustomEvent.clickCoveredMarker) {
-                            return;
+                        return;
                     }
                     
                     // - InfoWindow 에 들어갈 내용은 setContent 로 자유롭게 넣을 수 있습니다. 외부 css를 이용할 수 있으며, 
@@ -141,6 +168,8 @@
                     return;
                 }
             });
+
+            
         }
 
 
