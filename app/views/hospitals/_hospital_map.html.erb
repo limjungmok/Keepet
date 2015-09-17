@@ -69,11 +69,15 @@
             var oLabel1 = new nhn.api.map.MarkerLabel(); // 마커 라벨 선언
             oMap.addOverlay(oLabel1);// 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨
             oLabel1.setVisible(true, oMarker);// 마커 라벨 보이기 
-            var h_marker[[ ]] = <% @a %>
+
+            var h_marker = <%= raw @a %>;
+                       
+            console.log("dd : " + h_marker[0][3]);
+            console.log("asdf");
             //여러개의 마커(동물병원) 표시를 위한 반복문
-            //for (i = 0; i < <%= @hospital_count %>; i++) {
-                var oPoint1 = new nhn.api.map.LatLng(<%= @hospitals.find(1).h_latitude %>, <%= @hospitals.find(1).h_lontitude %>); //마커(동물병원) 위치
-                var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ 1 });  //마커 생성 
+            for (i = 0; i < <%= @hospital_count %>; i++) {
+                var oPoint1 = new nhn.api.map.LatLng(h_marker[i][3], h_marker[i][4]); //마커(동물병원) 위치
+                var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '동물병원'+ i });  //마커 생성 
                 oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
                 oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
                 var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
