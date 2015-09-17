@@ -1,24 +1,40 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<div id = "sign_up_header">
+  <h3> 회원가입 </h3>
+    <div class="col-xs-12" id = "sign_up_box">
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
-    
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-      
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-      
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-      
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-      
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
+        <div class = "form-group">
+        <%= f.label :name, "이름", class: "col-xs-4 control-label btn" %>
+          <div class = "col-xs-8">
+          <%= f.text_field :name, class: 'form-control', placeholder: "김세종" %>
+          </div>
+        </div>
+
+        <div class = "form-group">
+        <%= f.label :email, "메일 주소", class: "col-xs-4 control-label btn" %>
+          <div class = "col-xs-8">
+          <%= f.email_field :email, class: 'form-control', placeholder: "kimsejong@sejong.ac.kr" %>
+          </div>
+        </div>
+
+        <div class = "form-group">
+        <%= f.label :password, "암호", class: "col-xs-4 control-label btn" %>
+          <div class = "col-xs-8">
+          <%= f.password_field :password, class: 'form-control', placeholder: "******" %>
+          </div>
+        </div>
+
+        <div class = "form-group">
+        <%= f.label :password_confirmation, "암호 확인", class: "col-xs-4 control-label btn" %>
+          <div class = "col-xs-8">
+          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "******" %>
+          </div>
+        </div>
+
+        <br>
+        <%= f.submit "가입하기", class: "btn sign_up_create"  %>
+      <% end %>
   </div>
 </div>

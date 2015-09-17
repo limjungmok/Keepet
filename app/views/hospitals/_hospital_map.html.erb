@@ -127,9 +127,9 @@
             oMap.addOverlay(mapInfoTestWindow);     // - 지도에 추가.
 
             mapInfoTestWindow.attach('changeVisible', function(oCustomEvent) {
-                    if (oCustomEvent.visible) {
-                            oLabel.setVisible(false);
-                    }
+                if (oCustomEvent.visible) {
+                    oLabel.setVisible(false);
+                }
             });
 
 
@@ -157,7 +157,7 @@
                     +'<span></div>' + '<div style="left:50%; margin-left:-18px; border-right :18px solid transparent; border-top:18px solid #ffffff;  border-left : 18px solid transparent; position:absolute; bottom:-18px; width:0; height:0;"></div>');
                     mapInfoTestWindow.setPoint(oTarget.getPoint());
                     mapInfoTestWindow.setVisible(true);
-                    mapInfoTestWindow.setPosition({right : 15, top : 30});
+                    mapInfoTestWindow.setPosition({right : 30, top : 40});
                     mapInfoTestWindow.autoPosition();
 
                     return;

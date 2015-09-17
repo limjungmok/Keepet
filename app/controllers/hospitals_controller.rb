@@ -114,14 +114,3 @@ class HospitalsController < ApplicationController
 	end
 end
 
-
-
-
-
-
-
-
-
-
-
-
