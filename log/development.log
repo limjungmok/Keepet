@@ -265,3 +265,134 @@ Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a
 
 
 Started GET "/assets/hospital1-eaeef72773689bbc028a12cf144e9927a4f0f03dc79324a1705e60240eb82109.JPG" for ::1 at 2015-09-17 20:21:52 +0900
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:01:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.4ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 840ms (ActiveRecord: 1.3ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/hospitals_controller.rb:85:in `block (2 levels) in get_json'
+  app/controllers/hospitals_controller.rb:78:in `each'
+  app/controllers/hospitals_controller.rb:78:in `block in get_json'
+  app/controllers/hospitals_controller.rb:73:in `each'
+  app/controllers/hospitals_controller.rb:73:in `get_json'
+  app/controllers/hospitals_controller.rb:14:in `new'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (5.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (30.2ms)
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:01:35 +0900
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.3ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/hospitals_controller.rb:85:in `block (2 levels) in get_json'
+  app/controllers/hospitals_controller.rb:78:in `each'
+  app/controllers/hospitals_controller.rb:78:in `block in get_json'
+  app/controllers/hospitals_controller.rb:73:in `each'
+  app/controllers/hospitals_controller.rb:73:in `get_json'
+  app/controllers/hospitals_controller.rb:14:in `new'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (4.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:02:07 +0900
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.5ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:24:52 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.4ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 636ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `name' for #<Hospital:0x007f8d01ab4038>):
+  app/controllers/hospitals_controller.rb:87:in `block in get_json'
+  app/controllers/hospitals_controller.rb:73:in `each'
+  app/controllers/hospitals_controller.rb:73:in `get_json'
+  app/controllers/hospitals_controller.rb:14:in `new'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (4.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:24:53 +0900
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.3ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.7ms)
+
+NoMethodError (undefined method `name' for #<Hospital:0x007f8d01c2a4d0>):
+  app/controllers/hospitals_controller.rb:87:in `block in get_json'
+  app/controllers/hospitals_controller.rb:73:in `each'
+  app/controllers/hospitals_controller.rb:73:in `get_json'
+  app/controllers/hospitals_controller.rb:14:in `new'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:25:22 +0900
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.5ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/h_create" for ::1 at 2015-09-17 21:29:15 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HospitalsController#new as HTML
+  [1m[35mHospital Load (0.4ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m

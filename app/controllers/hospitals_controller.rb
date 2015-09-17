@@ -69,6 +69,7 @@ class HospitalsController < ApplicationController
 
 	    #배열을 전부 돌린다. 동시에 DB에 저장해준다.
 	    #돌릴때, 반환되는 주소를 가지고 x,y값을 찾도록 한다.
+	    @a = []
 
 	    @hospital.each do |h|
 	    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
@@ -78,13 +79,15 @@ class HospitalsController < ApplicationController
 	    	@hospital_location.each do |loc|
 
 	    		if((@userquery.to_s).in? hospital.h_address)
-	    		hospital.h_latitude = loc["point"]["y"]	    		
-	    		hospital.h_lontitude = loc["point"]["x"]
-	    		hospital.save
-	    		
+		    		hospital.h_latitude = loc["point"]["y"]	    		
+		    		hospital.h_lontitude = loc["point"]["x"]
+		    		hospital.save
 	    		end
 	    	end
 
+	    	b = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
+	    	@a.push b
+	    	byebug
 	    	hospital.save
 	    end
 	end
