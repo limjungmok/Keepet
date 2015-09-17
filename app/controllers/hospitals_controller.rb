@@ -16,6 +16,10 @@ class HospitalsController < ApplicationController
 		#get_json_location(nhn_service_key)
 	end
 
+	def map
+		
+	end
+
 	def create
 	end
 
@@ -95,10 +99,7 @@ class HospitalsController < ApplicationController
 	    	
 	    	b = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
 	    	@a.push b
-<<<<<<< HEAD
-=======
-	    	
->>>>>>> 492e4086c5884be5a6eabb139d44d1099c15d09c
+
 	    	hospital.save
 	    end
 	end

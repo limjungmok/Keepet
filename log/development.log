@@ -9549,3 +9549,762 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for ::1 at 2015-09-17 22:22:03 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-17 22:30:37 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 3636ms (Views: 3627.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-17 22:30:41 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 113.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-17 22:30:41 +0900
+
+
+Started GET "/assets/scaffold.self-300a2e299291ed9ce505dc50cea037eeafa7be3b4fd2973726e5e90fe6e3f62a.css?body=1" for 192.168.0.220 at 2015-09-17 22:30:41 +0900
+
+
+Started GET "/hospitals" for 192.168.0.220 at 2015-09-17 22:30:43 +0900
+
+SyntaxError (/home/fatdog/yohan/Keepet/app/controllers/hospitals_controller.rb:98: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+  ^):
+  app/controllers/hospitals_controller.rb:98: syntax error, unexpected <<, expecting keyword_end
+
+
+  Rendered /home/fatdog/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/fatdog/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/fatdog/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/fatdog/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.7ms)
+  Rendered /home/fatdog/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (24.1ms)
+
+
+Started GET "/hospitals" for 192.168.0.220 at 2015-09-17 22:31:16 +0900
+Processing by HospitalsController#index as HTML
+  [1m[35mHospital Load (0.6ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 닥터멍 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Completed   in 55724ms (ActiveRecord: 53.8ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-17 22:32:24 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 400ms (Views: 391.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hospitals" for 192.168.0.220 at 2015-09-17 22:32:26 +0900
+Processing by HospitalsController#index as HTML
+  [1m[35mHospital Load (0.4ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 닥터멍 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.5ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '서울동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '서울동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '힐스타동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '힐스타동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '동물병원다온' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '동물병원다온' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '압구정웰동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '압구정웰동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '페츠비동물의료센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '페츠비동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '수정동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.5ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '수정동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '선릉동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '선릉동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '루이스동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '루이스동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '베스트동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '베스트동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mHospital Load (0.2ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered hospitals/_hospital_map.html.erb (4.6ms)
+  Rendered hospitals/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 62332ms (Views: 99.3ms | ActiveRecord: 67.6ms)
