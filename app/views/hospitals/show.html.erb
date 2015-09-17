@@ -18,31 +18,36 @@
 	<div id="hospital_option">
 		<ul class="nav nav-tabs">
 			<li class="active">
-				<a href="#calendar" data-toggle="tab" aria-expanded="false">예약 리스트</a>
+				<a href="#calendar" data-toggle="tab" aria-expanded="false">예약하기</a>
 			</li>
-			<li><a href="#review" data-toggle="tab">후기게시판</a></li>
+			<li class="review"><a href="#review" data-toggle="tab">후기게시판</a></li>
 	  	</ul>
+	  	<div id="hr_calendar"><hr></div>
 
 		<div id="myTabContent" class="tab-content">
 			<div class="tab-pane fade active in" id="calendar">
+
 				<div>
 					<%= month_calendar events: @meetings do |date, meetings| %>
+					  <%= date.strftime("%d") %><br>	  
+						<% if meetings.count < 5 %>
+						  	<p style="color:#aaa">예약가능</p>
+						  		<% elsif meetings.count >= 5 && meetings.count < 10 %>
+						  			<p style="color:#feb650">예약포화</p>
+						  			<% elsif meetings.count >= 10 %>
+						  			<p style="color:#fd915f">예약불가</p>
+						<% end %>
 
-					  <%= date.strftime("%d") %>
-					  
-					  <% meetings.each do|meeting| %>
-					  	<div id="meeting_title">
-					  	<!--<%= meeting.name %><br>-->
-					  	</div>
-					  <% end %><br>
-					  <% if meetings.count > 0 %>
-					  예약 : <%= meetings.count%>건
-					  <% end %>
 					<% end %>
 				</div>
 
 				<div id="reservation">
-					<%= link_to "예약하기", new_hospital_meeting_path(:hospital_id => @hospital.id),class:"btn btn-default",id:"btn_reservation" %>
+					<div id="reservation_message">
+						<div id="message_title">예약하기</div><br>
+						<div id="message_detail">상단의 달력에서 예약 현황을 확인하신 후<br>
+						아래의 양식을 채워주세요.</div>
+					</div><br>
+					<%= render 'meetings/form' %>
 				</div>
 			</div>
 
