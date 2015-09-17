@@ -5,6 +5,8 @@ require 'net/http'
 require 'httparty'
 
 class HospitalsController < ApplicationController
+	before_action :map
+
 	def new
 		service_key_gangnam = "70554f5a78636e643739784d584f62"
 		
@@ -14,17 +16,7 @@ class HospitalsController < ApplicationController
 		#get_json_location(nhn_service_key)
 	end
 
-	def create
-	end
-
-	def show
-		@hospital = Hospital.find(params[:id])
-		#@meetings = Meeting.all
-		@meetings = @hospital.meetings.all
-		
-	end
-
-	def index
+	def map
 		@hospitals = Hospital.all
 
 		#총 동물병원 수 = @hospital_count
@@ -32,6 +24,20 @@ class HospitalsController < ApplicationController
 		@hospitals.each do |h|
 			@hospital_count = @hospital_count + 1;
 	    end
+	end
+
+	def create
+	end
+
+	def show
+		@hospital = Hospital.find(params[:id])
+		#@meetings = Meeting.all
+		@meetings = @hospital.meetings.all
+		@is_reservation = 0
+	end
+
+	def index
+		@hospitals = Hospital.all
 	end
 
 	def edit
@@ -91,6 +97,11 @@ class HospitalsController < ApplicationController
 		@response_location = HTTParty.get(safeurl)
 	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"] unless JSON.parse(@response_location.body)["result"].nil?
 	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
+	end
+
+	private	
+	def refresh_map
+		redirect_to signup_path
 	end
 
 end

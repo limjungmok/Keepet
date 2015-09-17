@@ -177,7 +177,7 @@ input {
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: whitesmoke;
+  background-color: #fff;
   border-color: #000;
   img{
     margin-bottom: 10px;
@@ -197,7 +197,7 @@ input {
   margin: 10px;
   padding-top: 20px;
   padding-left: 20px; 
-  background-color: whitesmoke;
+  background-color: #fff;
   color: #aaa;
   font-weight: lighter;
 
@@ -217,22 +217,56 @@ input {
 
 #hospital_option{
   width: 1000px;
-  height: 1000px;
+  height: 1500px;
   margin-left: auto;
   margin-right: auto;
-  background-color: whitesmoke;
+  background-color: #fff;
 }
 /* Calendar */
 
 #select{
   width: 1000px;
   height: 50px;
-  background-color: whitesmoke;
+  background-color: #fff;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
   padding-left: 10px;  
 }
+
+.nav-tabs{
+  border: 0px;
+  a{
+  color: #555;
+  }
+  a:hover{
+    color:#66ccb9;
+  }
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  border: transparent;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #66ccb9;
+}
+
+.nav-tabs > li > a{
+  margin-top: 15px;
+  font-size: 16px;
+  margin-left: 15px;
+  border: transparent;
+}
+
+.nav-tabs > li > a:hover{
+  border-color: transparent;
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+  background-color: transparent;
+  color: #66ccb9;
+}
+
 
 #select_calendar{
   height: 50px;
@@ -260,15 +294,31 @@ input {
   font-weight: bold;
   cursor: pointer;  
 }
-
+#hr_calendar{
+  width: 875px;
+  margin-left: auto;
+  margin-right: auto;
+  hr{
+    border-color: #e1e1e1;
+  }
+}
+.table > thead > tr > th{
+  border-bottom: 0px;
+}
+.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
+  background-color: #fff;
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+  border: 1px dotted #ddd;
+}
 .simple-calendar{
   text-align: center;
   margin-top: 50px;
-  width: 900px;
+  width: 875px;
   height: 300px;
   margin-left: auto;
   margin-right: auto;
-  color: #222;
+  color: #707070;
   .table > caption + thead > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > th, .table > thead:first-child > tr:first-child > td{
     text-align:center;
     background-color: #ccc;
@@ -284,15 +334,15 @@ input {
   }
   .wday-0 {
     /*SUN*/
-    color: #ED6A43;
+    color: #fd915f;
   }
   .wday-6 {
     /*SAT*/
-    color: #0086B3;
+    color: #5ac6da;
   }
   .today {}
   .past {
-    color: #ccc;
+    color: #d5d5d5;
     font-size: 12px;
     font-weight: 300;
   }
@@ -305,11 +355,10 @@ input {
    }
   .current-month {
     font-size: 16px;
+
   }
   .start-date {
-    color: #66ccb9;
-    font-weight: bold;
-    font-size: 20px;
+    
   }
   .has-events {
   }
@@ -317,6 +366,11 @@ input {
     font-size: 16px;
   }
 }
+
+.simple-calendar .past{
+  font-size: 0px;
+}
+
 .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
   width: 125px;
   max-width: 125px;
@@ -340,16 +394,100 @@ input {
   font-size: 16px;
 }
 #reservation{
-  margin-top: 400px;
+  width: 800px;
+  margin-top: 500px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
   #btn_reservation{
     background-color:#66ccb9;
     color: #fff;
     width: 75px;
     height: 35px;
     text-align: center;
+    margin-top: 50px;
   }
 }
+
+#reservation_message{
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#message_title{
+  font-weight: bold;
+  font-size: 35px;
+}
+
+#message_detail{
+  font-weight: 300;
+  font-size: 18px;
+  color: #333;
+}
+.reservation_name{
+  background-color: #5ac6da;
+  border-color: transparent;
+  color: #fff;
+  width: 75px;
+  height: 24px;
+  border-radius: 3px;
+  cursor: default;
+  font-size: 12px;
+}
+
+.reservation_input_name{
+  width: 335px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+
+
+.reservation_submit{
+  width: 60px;
+  height: 30px;
+  background-color: #fd915f;
+  border-color: transparent;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.reservation_input_date{
+  width: 30px;
+}
+
+#meeting_start_time_1i{
+  width: 100px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+
+#meeting_start_time_2i{
+  width: 100px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+#meeting_start_time_3i{
+  width: 100px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+#meeting_start_time_4i{
+  display: none;
+  width: 100px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+#meeting_start_time_5i{
+  display: none;
+  width: 100px;
+  border-radius: 3px;
+  border-color: #e1e1e1;
+}
+
+
 /*요한*/
+
+
+
+

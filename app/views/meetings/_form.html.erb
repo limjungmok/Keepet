@@ -1,14 +1,19 @@
 <%= form_for([@hospital, @hospital.meetings.build]) do |f| %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="field", id="reservation_name">
+    <%= f.button "예약자명" , class: 'reservation_name'%>
+    
+    <% if logged_in? %>
+      <%= f.text_field :name ,class: 'reservation_input_name', :value => current_user.name %>
+    <% else %>
+      <%= f.text_field :name ,class: 'reservation_input_name'%>
+    <% end %>
   </div>
   <div class="field">
-    <%= f.label :start_time %><br>
-    <%= f.datetime_select :start_time %>
+    <%= f.button "시작일" ,class: 'reservation_name'%>
+    <%= f.datetime_select :start_time ,class: 'reservation_input_date'%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "예약", class: 'reservation_submit' %>
   </div>
 <% end %>
