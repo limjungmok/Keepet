@@ -1,3 +1,44 @@
 // Place all the styles related to the Hospitals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.col-xs-9{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.col-xs-3{
+	padding: 0em 0em 1em 1em;
+	height: 840px;
+	overflow-y: auto;
+	bakcground-color: #E8E8E8;
+}
+::-webkit-scrollbar{
+		display: none;
+}
+
+#h_index{
+	bakcground-color: #E8E8E8;
+	color : black;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+#h_name {
+	max-width: 	257px;	
+}
+
+#h_body {
+	background-color: white;
+	border-top-left-radius: 7px;
+    border-top-right-radius: 7px; 
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; 
+    padding : 1em;
+
+    border:4px solid #ffffff;
+	&:hover {
+		border:4px solid #66ccb9;
+	}
+}
+
