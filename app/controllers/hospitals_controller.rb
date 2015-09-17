@@ -17,16 +17,7 @@ class HospitalsController < ApplicationController
 	end
 
 	def map
-		@hospitals = Hospital.all
 
-		#총 동물병원 수 = @hospital_count
-		@hospital_count = 0
-		@hospitals.each do |h|
-			@hospital_count = @hospital_count + 1;
-	    end
-		service_key_gangnam = "70554f5a78636e643739784d584f62"
-
-	    get_json(service_key_gangnam)
 	end
 
 	def create
@@ -41,6 +32,15 @@ class HospitalsController < ApplicationController
 
 	def index
 		@hospitals = Hospital.all
+
+		#총 동물병원 수 = @hospital_count
+		@hospital_count = 0
+		@hospitals.each do |h|
+			@hospital_count = @hospital_count + 1;
+	    end
+		service_key_gangnam = "70554f5a78636e643739784d584f62"
+
+	    get_json(service_key_gangnam)
 	end
 
 	def edit
