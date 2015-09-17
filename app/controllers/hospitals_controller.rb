@@ -87,7 +87,6 @@ class HospitalsController < ApplicationController
 
 	    	b = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
 	    	@a.push b
-	    	byebug
 	    	hospital.save
 	    end
 	end
