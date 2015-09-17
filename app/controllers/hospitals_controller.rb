@@ -16,10 +16,6 @@ class HospitalsController < ApplicationController
 		#get_json_location(nhn_service_key)
 	end
 
-	def map
-		
-	end
-
 	def create
 	end
 
