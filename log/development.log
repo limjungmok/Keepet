@@ -12845,3 +12845,94 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 103ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 01:31:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 422ms (Views: 413.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/scaffold.self-300a2e299291ed9ce505dc50cea037eeafa7be3b4fd2973726e5e90fe6e3f62a.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/static_pages.self-5616f6b4f18c0310e7f181a08515297cd3b34590dac07ecb5cc37cce2f9b4113.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 01:31:33 +0900
+
+
+Started GET "/login" for 192.168.0.220 at 2015-09-18 01:31:34 +0900
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 106ms (Views: 104.9ms | ActiveRecord: 0.0ms)
