@@ -5,7 +5,6 @@ require 'net/http'
 require 'httparty'
 
 class HospitalsController < ApplicationController
-	before_action :map
 
 	def new
 		service_key_gangnam = "70554f5a78636e643739784d584f62"
@@ -95,10 +94,7 @@ class HospitalsController < ApplicationController
 	    	
 	    	b = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
 	    	@a.push b
-<<<<<<< HEAD
-=======
-	    	
->>>>>>> 492e4086c5884be5a6eabb139d44d1099c15d09c
+
 	    	hospital.save
 	    end
 	end
@@ -112,12 +108,6 @@ class HospitalsController < ApplicationController
 	    @hospital_location = JSON.parse(@response_location.body)["result"]["items"] unless JSON.parse(@response_location.body)["result"].nil?
 	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
 	end
-
-	private	
-	def refresh_map
-		redirect_to signup_path
-	end
-
 end
 
 
