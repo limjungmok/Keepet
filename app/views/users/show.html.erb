@@ -6,6 +6,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <% if logged_in? %>
+          <li><%= link_to "내 정보 변경", edit_user_path(current_user) %></li>
+      <% end %>
     </section>
   </aside>
 </div>

@@ -1,3 +1,41 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sign_up_header{
+	text-align: center;
+	margin : auto;
+	max-width: 40%;
+	min-width: 40%;
+}
+
+#sign_up_box{
+	margin-top: 50px;
+}
+
+div.form-group{
+	margin: 0px;
+}
+
+.control-label{
+	max-width: 30%;
+	min-width: 30%;
+	background-color: #66ccb9;
+	color: white;
+}
+
+.sign_up_create{
+	max-width: 30%;
+	min-width: 30%;
+	background-color: orange;
+	color: white;
+}
+
+.log_in_btn{
+	margin-top: 50px;
+	margin-bottom: 10px;
+	max-width: 30%;
+	min-width: 30%;
+	background-color: orange;
+	color: white;
+}

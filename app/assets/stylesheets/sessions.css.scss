@@ -1,3 +1,10 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logout_btn{
+	background-color: #47b39f;
+	&:hover {
+		background-color: #47b39f;
+	}
+}

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar.navbar-fixed-top {
+.navbar-static-top {
 	margin-bottom: 0px;
 }
 
@@ -11,5 +11,10 @@ body{
 	background-color: #E8E8E8 ;
 }
 
-
-
+.thumbnail{
+	padding: 0px;
+	border: 0px;
+}
+#main_img_crop{
+	min-width: 100% !important;
+}
