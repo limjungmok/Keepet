@@ -37,9 +37,22 @@ class HospitalsController < ApplicationController
 		@hospitals.each do |h|
 			@hospital_count = @hospital_count + 1;
 	    end
-		service_key_gangnam = "70554f5a78636e643739784d584f62"
 
-	    get_json(service_key_gangnam)
+		@hospitals_array = []
+		@hospitals.each do |hospital|
+			if hospital.h_phone == ""
+	    		hospital.h_phone = "없음"
+	    	end
+	    	if hospital.h_latitude.nil?
+	    		hospital.h_latitude = 0
+	    	end
+	    	if hospital.h_lontitude.nil?
+	    		hospital.h_lontitude = 0
+	    	end
+			array = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
+			@hospitals_array.push array
+		end
+		
 	end
 
 	def edit
@@ -71,7 +84,6 @@ class HospitalsController < ApplicationController
 
 	    #배열을 전부 돌린다. 동시에 DB에 저장해준다.
 	    #돌릴때, 반환되는 주소를 가지고 x,y값을 찾도록 한다.
-	    @a = []
 
 	    @hospital.each do |h|
 	    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
@@ -86,19 +98,7 @@ class HospitalsController < ApplicationController
 		    		hospital.save
 	    		end
 	    	end
-	    	if hospital.h_phone == ""
-	    		hospital.h_phone = "없음"
-	    	end
-	    	if hospital.h_latitude.nil?
-	    		hospital.h_latitude = 0
-	    	end
-	    	if hospital.h_lontitude.nil?
-	    		hospital.h_lontitude = 0
-	    	end
 	    	
-	    	b = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
-	    	@a.push b
-
 	    	hospital.save
 	    end
 	end
