@@ -1,24 +1,23 @@
 <html>
 	<body>
 		<div class="home_comment_1"> <b> 내 주변 병원 찾기 </b> </div>
-		<input type="text" onclick="sample5_execDaumPostcode()" id="sample5_address">
-		<%= image_tag "search_icon.png", class: "search_icon" %>
-		<div class="thumbnail" id="main_img_crop">
-		<%= image_tag "main_img_crop.png", class: "main_img" %>
-		</div>
+			<input type="text" onclick="sample5_execDaumPostcode()" id="sample5_address">
+			<%= image_tag "search_icon.png", class: "search_icon" %>
+			<div class="thumbnail" id="main_img_crop">
+				<%= image_tag "main_img_crop.png", class: "main_img" %>
+			</div>
 
 		<div id="find_my_location">
 			<%= link_to "내 위치 검색", hospitals_path, class: "btn btn-lg btn-primary",
 			'data-no-turbolink' => true %>
+		</div>			
+
+		<div>
+			<label>좌표 : </label>
+			<label id="latlng"></label>
 		</div>
-			
 
-			<div>
-				<label>좌표 : </label>
-				<label id="latlng"></label>
-			</div>
-
-			<div id="map"> </div>
+		<div id="map"> </div>
 	</body>
 
 	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
