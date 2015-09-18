@@ -77,13 +77,17 @@
         <div class = "thumbnail" id = "main_img_crop" >
             <%= image_tag "main_img_crop.png", class: "main_img" %>
         </div>
+        <div id = "find_my_location">
+            <%= link_to "내 위치 검색", hospitals_path,  class: "btn btn-lg btn-primary", 'data-no-turbolink' => true, data: { confirm: 'Are you sure?'} %>
+        </div>
+        
         <div class = "container">
             <input type="text" id="sample5_address" placeholder="주소">
             <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
             <label>좌표 : </label>
             <label id="latlng"></label>
             <div id="map" style="width:1150px;height:600px;margin-top:10px;display:none"></div>
-            <%= link_to "내 위치 검색", hospitals_path, class: "btn btn-lg btn-primary", 'data-no-turbolink' => true %>
+            
         </div>
     </body>
 </html>
