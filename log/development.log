@@ -21277,3 +21277,1037 @@ Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a
 
 
 Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:11:01 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:14:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 443ms (Views: 435.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:14:30 +0900
+
+
+Started GET "/login" for 192.168.0.220 at 2015-09-18 09:14:33 +0900
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 125ms (Views: 124.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:14:34 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 129ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 192.168.0.220 at 2015-09-18 09:14:36 +0900
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:14:39 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hospitals" for 192.168.0.220 at 2015-09-18 09:14:40 +0900
+Processing by HospitalsController#index as HTML
+  [1m[35mHospital Load (0.6ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트 동물 외과 클리닉' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원(신사본점)' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터그레이동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '중앙동물메디컬센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '메리야사랑해동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '양재동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = 'Dr.베토벤동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센타' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프렌즈 동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '치료멍멍동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '튼튼종합동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시양재동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치베스트동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '햇살가득 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '논현동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '오래오래동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '예은동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '닥터펫동물의료센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '이리온 동물의료원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '한국동물영상의학센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '래이동물의료센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '역삼동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '펫프랜즈' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '스마트동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '개포별빛동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 신사동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마이펫동물의료센터' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 OK동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '백산동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '러브펫동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '대치성심동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 청담우리 동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '24시 닥터멍 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '다정동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '큐빌론동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '위너스 동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '나래동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '츄츄 동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '영동동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수 동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '카디오 동물의료병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '강남동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '하나동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '도곡종합동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '아이윌24시동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '서울동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '서울동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '힐스타동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '힐스타동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '동물병원다온' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '동물병원다온' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '압구정웰동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '압구정웰동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '페츠비동물의료센터' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '페츠비동물의료센터' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '봄동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '마더스동물병원' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '가로수동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '수정동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '수정동물병원' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '선릉동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '선릉동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '루이스동물병원' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.4ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '루이스동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mHospital Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '베스트동물병원' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE "hospitals"."h_name" = '베스트동물병원' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered hospitals/_hospital_map.html.erb (1.4ms)
+  Rendered hospitals/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56631ms (Views: 135.0ms | ActiveRecord: 67.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:17:39 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:17:48 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:17:49 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 124.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:21 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:18:22 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:19:02 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 115ms (Views: 114.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:02 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:19:03 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:20:46 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 107.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:20:47 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:21:43 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:43 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:43 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:21:44 +0900
+
+
+Started GET "/" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 111ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/hospitals.self-4a63f1865d388891260d100fbda358a6eaac30b3a5ca63325d620342df7a5ecb.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/scaffold.self-fd9a82dd74450f6d629837f1e514b92c01f9841647b1d84525266477c5b7eba5.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/sessions.self-789ab8aa4a1085243c5e34a552bd996e5418d43027737767934c768936c1db7f.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/custom.self-2ae94e89fd66cc1c02760ae81c2e16bccd337485126026af51fe36148c517356.css?body=1" for 192.168.0.220 at 2015-09-18 09:21:59 +0900
+
+
+Started GET "/assets/static_pages.self-b9154270f92353f6e70f35acab277f89abeafca819b8b0cc56c1b839447a7437.css?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/users.self-55328799397e8c651ebadb62611b61a67fbe6b7591869723adc081b6f9a6bfb3.css?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/application.self-f16d0fab65d39039e1e852bbaf8220d37ca7b91f04ca9a1f62f36ee4627db752.css?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
+
+
+Started GET "/assets/main_img_crop-9d79bfb43f9c1a9ecd947daf047ae362d0b3097a1610fb70392cef1b4a388bc6.png" for 192.168.0.220 at 2015-09-18 09:22:00 +0900
