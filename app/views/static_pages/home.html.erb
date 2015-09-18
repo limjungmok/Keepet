@@ -79,8 +79,10 @@
         	oScript.src = "http://apis.daum.net/local/geo/addr2coord?apikey=&output=json&callback=pongSearch&q=" + encodeURI(query);
         	document.getElementsByTagName("head")[0].appendChild(oScript);
         }
-    </script>
+        </script>
     <body>
+        
         <%= link_to "내 위치 검색", hospitals_path, class: "btn btn-lg btn-primary", 'data-no-turbolink' => true %>
     </body>
+    
 </html>

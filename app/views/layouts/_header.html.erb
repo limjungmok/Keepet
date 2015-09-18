@@ -5,10 +5,12 @@
       <ul class="nav navbar-nav navbar-right">
         <!--추후 관리자 모드-->
         <li><%= link_to "Hospital Create",  h_create_path, data: { confirm: 'Are you sure?' } %></li>
-        <li><%= link_to "Users", users_path %></li>
-
+        
+        
         <% if logged_in? %>
           <li><%= link_to "로그아웃", logout_path, class: "logout_btn", method: :delete %></li>
+          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to @current_user.name, current_user %></li>
         <% else %>
           <li><%= link_to "로그인", login_path %></li>
         <% end %>

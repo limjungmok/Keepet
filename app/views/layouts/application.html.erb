@@ -11,6 +11,13 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <!-- current_page?는 루드 페이지인지를 확인하는 내장 메소드 -->
+    <% if current_page?('/') %>
+        <div class = "thumbnail" id = "main_img_crop" >
+            <%= image_tag "main_img_crop.png", class: "main_img" %>
+        </div>
+    <% end %>
+    
     <div class="container">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
