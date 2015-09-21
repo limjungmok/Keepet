@@ -96,8 +96,11 @@
                     if(count == 25) break;
                 }
             }
-            //배열 뒤[5]에 아이디 값을 추가하여 만든다 
 
+
+            function myFunction(){
+                document.getElementById("h_body").style.border = "4px solid #66ccb9";
+            }
 
             // 마커 클릭시 지도 중앙에 배치하기
             oMap.attach('click', function(oCustomEvent) {
@@ -107,7 +110,7 @@
                 if (oTarget instanceof nhn.api.map.Marker) {
                     // 마커 클릭시 지도 중앙에 배치하기
                     oMap.setCenter(oPoint);
-
+                    window.onclick = myFunction;
                     // 겹침 마커 클릭한거면
                     if (oCustomEvent.clickCoveredMarker) {
                             return;

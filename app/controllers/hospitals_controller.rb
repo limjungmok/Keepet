@@ -51,7 +51,7 @@ class HospitalsController < ApplicationController
 	    	if hospital.h_lontitude.nil?
 	    		hospital.h_lontitude = 0
 	    	end
-			array = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
+			array = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude, hospital.id]
 			@hospitals_array.push array
 		end
 		
