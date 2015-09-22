@@ -72,8 +72,6 @@
             oMap.addOverlay(oLabel1);// 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨
             oLabel1.setVisible(true, oMarker);// 마커 라벨 보이기 
 
-            
-
             var h_marker = <%= raw @hospitals_array %>;
             //console.log("dd : " + h_marker[0][3]);
             //console.log("asdf");
@@ -92,11 +90,13 @@
                     var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
                     oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
                     oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기
+                    //알파벳 25개 까지만
                     count ++;
                     if(count == 25) break;
                 }
             }
 
+            document.getElementById("h_marker").value = h_marker[1][0];
 
             function myFunction(){
                 document.getElementById("h_body").style.border = "4px solid #66ccb9";
@@ -110,7 +110,7 @@
                 if (oTarget instanceof nhn.api.map.Marker) {
                     // 마커 클릭시 지도 중앙에 배치하기
                     oMap.setCenter(oPoint);
-                    window.onclick = myFunction;
+
                     // 겹침 마커 클릭한거면
                     if (oCustomEvent.clickCoveredMarker) {
                             return;
@@ -144,7 +144,7 @@
         oMarker.setPoint(oPoint);
         oMap.addOverlay(oMarker);
         });
-        */
+        
         //클릭하면 대화상자 표시
         var mapInfoTestWindow = new nhn.api.map.InfoWindow(); // - info window 생성
         mapInfoTestWindow.setVisible(false); // - infowindow 표시 여부 지정.
@@ -178,6 +178,7 @@
                 return;
             }
         });
+        */
         
     </script>
 </body>
