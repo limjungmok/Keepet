@@ -19,6 +19,7 @@ gem 'nokogiri'
 gem 'roo'
 gem "httparty"
 gem "simple_calendar", "~> 2.0"
+gem 'fullcalendar-rails'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
