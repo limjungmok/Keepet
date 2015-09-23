@@ -21,12 +21,20 @@ body{
 }
 
 .home_comment_1 {
-	color: white;
 	position: relative;
 	margin-top: 10%;
 	font-size: 33px;
 	margin-left: 42%;
 	margin-bottom: 8px;
+}
+
+a {
+	color:white;
+	font-weight: bold;
+}
+
+a:hover {
+	color: white;
 }
 
 #sample5_address {
@@ -38,16 +46,19 @@ body{
   line-height: 2.5em;
   outline: transparent;
   opacity: 0.8;
+  z-index: 1;
 }
 
 .search_icon {
-	margin-top: -0.2%;
-	margin-left: -3%;
+	margin-top: -0.1%;
+	margin-left: -3.5%;
 	position: relative;
+	z-index: 2;
 }
 
 .main_img{
 	min-width: 100% !important;
 	min-top: 100% !important;
-	margin-top: -18%;
+	margin-top: -22%;
+	z-index: -1;
 }
