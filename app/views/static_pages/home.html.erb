@@ -1,89 +1,91 @@
 <html>
-    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-    <script src="//apis.daum.net/maps/maps3.js?apikey=&libraries=services"></script>
-    <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-        mapOption = {
-                center: new daum.maps.LatLng(37.537187, 127.005476), // 지도의 중심좌표
-                level: 5 // 지도의 확대 레벨
-            };
+	<body>
+		<div class="home_comment_1"> <b> 내 주변 병원 찾기 </b> </div>
+			<input type="text" onclick="sample5_execDaumPostcode()" id="sample5_address">
+			<%= image_tag "search_icon.png", class: "search_icon" %>
+			<div class="thumbnail" id="main_img_crop">
+				<%= image_tag "main_img_crop.png", class: "main_img" %>
+			</div>
 
-        //지도를 미리 생성
-        var map = new daum.maps.Map(mapContainer, mapOption);
-        //주소-좌표 변환 객체를 생성
-        var geocoder = new daum.maps.services.Geocoder();
-        //마커를 미리 생성
-        var marker = new daum.maps.Marker({
-        	position: new daum.maps.LatLng(37.537187, 127.005476),
-        	map: map
-        });
+		<div id="find_my_location">
+			<%= link_to "내 위치 검색", hospitals_path, class: "btn btn-lg btn-primary",
+			'data-no-turbolink' => true %>
+		</div>			
 
+		<div>
+			<label>좌표 : </label>
+			<label id="latlng"></label>
+		</div>
 
-        function sample5_execDaumPostcode() {
-        	new daum.Postcode({
-        		oncomplete: function(data) {
-                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                    var fullAddr = data.address; // 최종 주소 변수
-                    var extraAddr = ''; // 조합형 주소 변수
+		<div id="map"> </div>
+	</body>
 
-                    // 기본 주소가 도로명 타입일때 조합한다.
-                    if(data.addressType === 'R'){
-                        //법정동명이 있을 경우 추가한다.
-                        if(data.bname !== ''){
-                        	extraAddr += data.bname;
-                        }
-                        // 건물명이 있을 경우 추가한다.
-                        if(data.buildingName !== ''){
-                        	extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                        }
-                        // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-                        fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
-                    }
+	<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+	<script src="//apis.daum.net/maps/maps3.js?apikey=&libraries=services"></script>
 
-                    // 주소 정보를 해당 필드에 넣는다.
-                    document.getElementById("sample5_address").value = fullAddr;
-                    // 주소로 좌표를 검색
-                    geocoder.addr2coord(data.address, function(status, result) {
-                        // 정상적으로 검색이 완료됐으면
-                        if (status === daum.maps.services.Status.OK) {
-                            // 해당 주소에 대한 좌표를 받아서
-                            var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
-                            // 지도를 보여준다.
-                            mapContainer.style.display = "block";
-                            map.relayout();
-                            // 지도 중심을 변경한다.
-                            map.setCenter(coords);
-                            // 마커를 결과값으로 받은 위치로 옮긴다.
-                            marker.setPosition(coords)
-                        }
-                    });
-                }
-            }).open();
-    }
+	<script>
+		// 지도를 표시할 div
+    	var mapContainer = document.getElementById('map'),
+    	mapOption = {
+    		// 지도의 중심좌표
+      	  center: new daum.maps.LatLng(37.5020821, 127.0278538),
+      	  // 지도의 확대 레벨
+      	  level: 5
+   		};
 
-        //주소->좌표로 변환해주는 api 사용
-        function getPoint(query) {
-        	var oScript = document.createElement("script");
-        	oScript.type = "text/javascript";
-        	oScript.charset = "utf-8";
-        	oScript.src = "http://apis.daum.net/local/geo/addr2coord?apikey=&output=json&callback=pongSearch&q=" + encodeURI(query);
-        	document.getElementsByTagName("head")[0].appendChild(oScript);
-        }
-        </script>
+   		//지도를 미리 생성
+    	var map = new daum.maps.Map(mapContainer, mapOption);
 
+    	//주소-좌표 변환 객체를 생성
+    	var geocoder = new daum.maps.services.Geocoder();
 
-    <body>
-        <div class = "thumbnail" id = "main_img_crop" >
-            <%= image_tag "main_img_crop.png", class: "main_img" %>
-        </div>
-        <div class = "container">
-            <input type="text" id="sample5_address" placeholder="주소">
-            <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
-            <label>좌표 : </label>
-            <label id="latlng"></label>
-            <div id="map" style="width:1150px;height:600px;margin-top:10px;display:none"></div>
-            <%= link_to "내 위치 검색", hospitals_path, class: "btn btn-lg btn-primary", 'data-no-turbolink' => true %>
-        </div>
-    </body>
+    	//마커를 미리 생성
+    	var marker = new daum.maps.Marker({
+    		position: new daum.maps.LatLng(37.5020821, 127.0278538),
+    		map: map
+    	});
+
+    	function sample5_execDaumPostcode() {
+    		new daum.Postcode({
+    			oncomplete: function(data) {
+                	// 최종 주소 변수
+               	 	var fullAddr = data.address;
+                	// 조합형 주소 변수
+                	var extraAddr = '';
+
+               		// 기본 주소가 도로명 타입일때 조합함
+                	if(data.addressType === 'R'){
+                    	//법정동명이 있을 경우 추가
+                    	if(data.bname !== ''){
+                    		extraAddr += data.bname;
+                    	}
+                    	// 건물명이 있을 경우 추가
+                    	if(data.buildingName !== ''){
+                    		extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    	}
+                    	// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만듦
+                    	fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                	}
+
+                	// 주소로 좌표를 검색
+                	geocoder.addr2coord(data.address, function(status, result) {
+                    	// 정상적으로 검색이 완료됐으면
+                    	if (status === daum.maps.services.Status.OK) {
+                        	// 해당 주소에 대한 좌표를 받아서
+                        	var coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
+                        	// 지도를 보여줌
+                        	mapContainer.style.display = "block";
+                        	map.relayout();
+                        	// 지도 중심을 변경
+                        	map.setCenter(coords);
+                        	// 마커를 결과값으로 받은 위치로 옮김
+                        	marker.setPosition(coords)
+                    	}
+
+                    	$("#latlng").html((result.addr[0].lat).toString().substring(0, 10) + ", " + (result.addr[0].lng).toString().substring(0, 10));
+                	});
+            	}
+        	}).open();
+		}
+	</script>
 </html>

@@ -38,6 +38,8 @@ class HospitalsController < ApplicationController
 			@hospital_count = @hospital_count + 1;
 	    end
 
+
+		#동물병원 정보를 @hospitals_array 배열에 모두 넣는 구간
 		@hospitals_array = []
 		@hospitals.each do |hospital|
 			if hospital.h_phone == ""
@@ -86,20 +88,24 @@ class HospitalsController < ApplicationController
 	    #돌릴때, 반환되는 주소를 가지고 x,y값을 찾도록 한다.
 
 	    @hospital.each do |h|
-	    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
+	    	if(h["TRD_STATE_GBN_CTN"] == "정상")
+		    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
 
-	    	get_json_location(hospital.h_address)
-	    	
-	    	@hospital_location.each do |loc|
+		    	get_json_location(hospital.h_address)
+		    	
+		    	@hospital_location.each do |loc|
 
-	    		if((@userquery.to_s).in? hospital.h_address)
-		    		hospital.h_latitude = loc["point"]["y"]	    		
-		    		hospital.h_lontitude = loc["point"]["x"]
-		    		hospital.save
-	    		end
+		    		if((@userquery.to_s).in? hospital.h_address)
+			    		hospital.h_latitude = loc["point"]["y"]	    		
+			    		hospital.h_lontitude = loc["point"]["x"]
+			    		hospital.save
+		    		end
+		    	end
+		    	
+		    	hospital.save
+	    	else
+
 	    	end
-	    	
-	    	hospital.save
 	    end
 	end
 
