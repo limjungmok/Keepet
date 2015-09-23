@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915100618) do
+ActiveRecord::Schema.define(version: 20150918051111) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "a_photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "hospital_id"
   end
 
   create_table "hospitals", force: :cascade do |t|

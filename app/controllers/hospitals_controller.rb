@@ -119,4 +119,3 @@ class HospitalsController < ApplicationController
 	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
 	end
 end
-
