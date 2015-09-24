@@ -3,50 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .col-xs-9{
-	padding-right: 0px;
-	padding-left: 0px;
-}
-.col-xs-3{
-	padding: 0em 0em 1em 1em;
-	height: 840px;
-	overflow-y: auto;
-	bakcground-color: #E8E8E8;
-}
-::-webkit-scrollbar{
-		display: none;
+   padding-right: 0px;
+   padding-left: 0px;
 }
 
 #h_index{
-	bakcground-color: #E8E8E8;
-	color : black;
-	&:hover {
-		text-decoration: none;
-	}
+   bakcground-color: #E8E8E8;
+   color : black;
+   &:hover {
+      text-decoration: none;
+   }
 }
 
 #h_name {
-	max-width: 	257px;	
+   max-width:    257px;   
 }
 
 .h_body {
-	background-color: white;
-	border-top-left-radius: 7px;
+   background-color: white;
+   border-top-left-radius: 7px;
     border-top-right-radius: 7px; 
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px; 
     padding : 1em;
 
     border:4px solid #ffffff;
-	&:hover {
-		border:4px solid #66ccb9;
-	}
+   &:hover {
+      border:4px solid #66ccb9;
+   }
 }
 
 .jQuery_hover{
-	border:4px solid #66ccb9;
+   border:4px solid #66ccb9;
 }
 
 #map_margin_top{
-	margin-top: 3%;
+   margin-top: 3%;
 }
 
+.map_page_right{
+   padding: 0em 0em 1em 1em;
+   height: 840px;
+   overflow-y: auto;
+   bakcground-color: #E8E8E8;
+}
+::-webkit-scrollbar{
+      display: none;
+}
