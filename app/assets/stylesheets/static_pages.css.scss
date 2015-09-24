@@ -1,16 +1,16 @@
 
 .navbar-static-top {
-	margin-bottom: 0px;
-}	
+   margin-bottom: 0px;
+}   
 
 body{
-	padding-top: 0px;
-	background-color: #E8E8E8 ;
+   padding-top: 0px;
+   background-color: #E8E8E8 ;
 }
 
 .thumbnail_home_top_img{
-	padding: 0px;
-	border: 0px;
+   padding: 0px;
+   border: 0px;
 }
 
 #map {
@@ -21,21 +21,25 @@ body{
 }
 
 .home_comment_1 {
-	position: relative;
-	margin-top: 10%;
-	font-size: 33px;
-	margin-left: 42%;
-	margin-bottom: 8px;
+   position: relative;
+   margin-top: 10%;
+   font-size: 33px;
+   margin-left: 42%;
+   margin-bottom: 8px;
 }
 
 a {
-	color:white;
-	font-weight: bold;
+   color:white;
+   font-weight: bold;
 }
 
 a:hover {
+<<<<<<< HEAD
 	color: white;
 	text-decoration: none;
+=======
+   color: white;
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821
 }
 
 #sample5_address {
@@ -51,20 +55,21 @@ a:hover {
 }
 
 .search_icon {
-	margin-top: -0.1%;
-	margin-left: -3.5%;
-	position: relative;
-	z-index: 2;
+   margin-top: -0.1%;
+   margin-left: -3.5%;
+   position: relative;
+   z-index: 2;
 }
 
 .main_img{
-	min-width: 100% !important;
-	min-top: 100% !important;
-	margin-top: -22%;
-	z-index: -1;
+   min-width: 100% !important;
+   min-top: 100% !important;
+   margin-top: -22%;
+   z-index: -1;
 }
 
 .home_hospital_picture {
+<<<<<<< HEAD
 	.col-xs-3 {
 		.thumbnail {
 			img {
@@ -79,22 +84,36 @@ a:hover {
 	}
 
 	margin: 5% 10% 0 10%;
+=======
+   .col-xs-3 {
+      .thumbnail img{
+         height: 250px;
+      }
+      height: 380px;
+      
+   }
+
+   margin: 5% 10% 0 10%;
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821
 }
 
 .picture_top {
-	margin-left: auto;
+   margin-left: auto;
 }
 
 .picture_bottom {
-	margin-left: auto;
+   margin-left: auto;
 }
 
 img {
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	}
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   }
 
 #anchor{
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821

@@ -60,11 +60,12 @@
             });
             
             mapTypeChangeButton = new nhn.api.map.MapTypeBtn(); // - 지도 타입 버튼 선언
-            oMap.addControl(mapTypeChangeButton); // 타입 변경 버튼 추가  
+            //oMap.addControl(mapTypeChangeButton); // 타입 변경 버튼 추가  
             // 줌 컨트롤러
             var oSlider = new nhn.api.map.ZoomControl();
-            oMap.addControl(oSlider);
+            //oMap.addControl(oSlider);
             oSlider.setPosition({ top:15, left:15 });
+            
             //아래는 위에서 지정한 좌표에 마커를 표시하는 소스 입니다.
             var oSize = new nhn.api.map.Size(29, 41);
             var oOffset = new nhn.api.map.Size(14, 37);
@@ -201,7 +202,7 @@
 </html>
         </div>
 
-        <div class = "col-xs-3" id = "map_margin_top">
+        <div class = "col-xs-3 map_page_right" id = "map_margin_top">
             <% @hospitals.each do |h| %>
                 <div id = "<%= h.h_name %>">
                     <a href = "/hospitals/<%= h.id %>" id = "h_index">
