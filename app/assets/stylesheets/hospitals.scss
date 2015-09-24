@@ -6,15 +6,6 @@
 	padding-right: 0px;
 	padding-left: 0px;
 }
-.col-xs-3{
-	padding: 0em 0em 1em 1em;
-	height: 840px;
-	overflow-y: auto;
-	bakcground-color: #E8E8E8;
-}
-::-webkit-scrollbar{
-		display: none;
-}
 
 #h_index{
 	bakcground-color: #E8E8E8;
@@ -50,3 +41,12 @@
 	margin-top: 3%;
 }
 
+.map_page_right{
+	padding: 0em 0em 1em 1em;
+	height: 840px;
+	overflow-y: auto;
+	bakcground-color: #E8E8E8;
+}
+::-webkit-scrollbar{
+		display: none;
+}
