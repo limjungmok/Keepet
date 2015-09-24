@@ -65,6 +65,9 @@ a:hover {
 
 .home_hospital_picture {
    .col-xs-3 {
+      .thumbnail img{
+         height: 250px;
+      }
       height: 380px;
       
    }
@@ -87,8 +90,4 @@ img {
 
 #anchor{
 
-}
-
-.thumbnail > img, .thumbnail a > img {
-   height: 250px;
 }
