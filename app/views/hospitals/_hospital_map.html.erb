@@ -84,61 +84,63 @@
                     var oPoint1 = new nhn.api.map.LatLng(h_marker[i][3], h_marker[i][4]); 
                     var oIcon = new nhn.api.map.Icon(h_marker_array[count], oSize, oOffset);
                     //마커(동물병원) 위치
-                    var oMarker1 = new nhn.api.map.Marker(oIcon, { title : h_marker[i][0] });  //마커 생성 
+                    var oMarker1 = new nhn.api.map.Marker(oIcon, { title : h_marker[i][0], zindex : h_marker[i][5] });  //마커 생성 
                     oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
                     oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
                     var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
                     oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
-                    oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기
+                    oLabel1.setVisible( true, oMarker1); // 마커 라벨 보이기
+                    
                     //알파벳 25개 까지만
                     count ++;
                     if(count == 25) break;
                 }
             }
 
-            document.getElementById("h_marker").value = h_marker[1][0];
-
-            function myFunction(){
-                document.getElementById("h_body").style.border = "4px solid #66ccb9";
-            }
-
             // 마커 클릭시 지도 중앙에 배치하기
             oMap.attach('click', function(oCustomEvent) {
             oPoint = oCustomEvent.point;
             var oTarget = oCustomEvent.target;
+            var title = oCustomEvent.target.getTitle();
+            
+            $("div." + title + "#h_body").css("border","4px solid #66ccb9");
+
+            location.href = "#"+ title;
+
+            oMap.attach('mouseenter', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에 마우스 올라간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        var oMarker = oTarget;
+                }
+            });
+
                 // 마커 클릭하면
                 if (oTarget instanceof nhn.api.map.Marker) {
-                    // 마커 클릭시 지도 중앙에 배치하기
-                    oMap.setCenter(oPoint);
-
                     // 겹침 마커 클릭한거면
                     if (oCustomEvent.clickCoveredMarker) {
                             return;
                     }
+                    // 마커 클릭시 지도 중앙에 배치하기
+                    oMap.setCenter(oPoint);
                     return;
                 }
             });
 
-            oMap.attach('mouseenter', function(oCustomEvent) {
-                    var oTarget = oCustomEvent.target;
-                    // 마커위에 마우스 올라간거면
-                    if (oTarget instanceof nhn.api.map.Marker) {
-                            var oMarker = oTarget;
-                            oLabel.setVisible(true, oMarker); // - 특정 마커를 지정하여 해당 마커의 title을 보여준다.
-                    }
-            });
-
-            oMap.attach('mouseleave', function(oCustomEvent) {
-                    var oTarget = oCustomEvent.target;
-                    // 마커위에서 마우스 나간거면
-                    if (oTarget instanceof nhn.api.map.Marker) {
-                            oLabel.setVisible(false);      
-                    }
-            });
+            
         }
 
 
+
         /*
+        oMap.attach('mouseleave', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                // 마커위에서 마우스 나간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        oLabel.setVisible(false);      
+                }
+        });
+
         //아무 곳이나 클릭하면 마커가 새로 생성
         var oMarker = new nhn.api.map.Marker(oIcon, { title : '마커 : ' + oPoint.toString() });
         oMarker.setPoint(oPoint);
