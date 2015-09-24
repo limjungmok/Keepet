@@ -94,9 +94,9 @@
                     var oMarker1 = new nhn.api.map.Marker(oIcon, { title : h_marker[i][0], zindex : h_marker[i][5] });  //마커 생성 
                     oMarker1.setPoint(oPoint1); //마커 표시할 좌표 선택
                     oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
-                    var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
-                    oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
-                    oLabel1.setVisible( true, oMarker1); // 마커 라벨 보이기
+                    var oLabel = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
+                    oMap.addOverlay(oLabel); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
+                    //oLabel.setVisible( true, oMarker1); // 마커 라벨 보이기
                     
                     //알파벳 25개 까지만
                     count ++;
@@ -108,7 +108,11 @@
                 oPoint = oCustomEvent.point;
                 var oTarget = oCustomEvent.target;
                 var title = oCustomEvent.target.getTitle();
+
+                //title 변수로 앵커 이동
                 location.href = "#"+ title;
+                //다시 맨 위 navbar에 id = anchor 인 곳으로 이동
+                location.href = "#anchor";
 
                 // 마커 클릭하면
                 if (oTarget instanceof nhn.api.map.Marker) {
@@ -124,14 +128,14 @@
                     var title = oTarget.getTitle();
                     $("div#" + title + ".h_body").addClass("jQuery_hover");
 
+                    var oMarker = oTarget;
+                    oLabel.setVisible(true, oMarker); // - 특정 마커를 지정하여 해당 마커의 title을 보여준다.
+
                     // 마커 클릭시 지도 중앙에 배치하기
                     oMap.setCenter(oPoint);
                     return;
                 }
 
-                if (oTarget instanceof nhn.api.map.Marker) {
-                         
-                }
             });
         }
 
