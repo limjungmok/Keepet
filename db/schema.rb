@@ -51,12 +51,6 @@ ActiveRecord::Schema.define(version: 20150915100618) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "talks", force: :cascade do |t|
-    t.string   "t_content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
