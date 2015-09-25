@@ -26,17 +26,18 @@ body{
    font-size: 33px;
    margin-left: 42%;
    margin-bottom: 8px;
+   a {
+      color: white;
+      font-weight: bold;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-a {
-   color:white;
-   font-weight: bold;
-}
 
-a:hover {
-	color: white;
-	text-decoration: none;
-}
 
 #sample5_address {
   width:230px;
