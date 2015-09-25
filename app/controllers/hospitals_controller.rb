@@ -55,11 +55,12 @@ class HospitalsController < ApplicationController
 	    		hospital.h_lontitude = 0
 	    	end
 
-	    	#동물병원 이름 공백 없애기   ->   .gsub(/\s+/, ""
+	    	#동물병원 상세 주소 수정
 	    	real_hospital_address = hospital.h_address.gsub("서울특별시","").gsub("1","").gsub("2","").gsub("3","").gsub("4","").gsub("5","").gsub("6","").gsub("7","").gsub("8","").gsub("9","").gsub("0","").gsub("번지","").gsub("호","").gsub("층","").gsub("지하","").gsub("아카데미스위트 A동","").gsub("외 필지","").gsub("오성빌딩","").gsub("지상, 일부","").gsub("강남힐스테이트에코","").gsub(",","").gsub("덕산빌딩","").gsub("-","").gsub("지상","").gsub("일부","").gsub("강남리더스프라자","").gsub("풍림아이원레몬","")
 	    	hospital.h_address = real_hospital_address
-	    	#real_hospital_addr
-			array = [hospital.h_name.gsub(/\s+/, "") , hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude, hospital.id]
+
+	    	#동물병원 이름 공백 없애기   ->   .gsub(/\s+/, ""
+			array = [hospital.h_name.gsub(/\s+/,""), hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
 			@hospitals_array.push array
 		end
 	end
@@ -109,6 +110,9 @@ class HospitalsController < ApplicationController
 		    		end
 		    	end
 		    	
+		    	#동물병원 hover id 값을 위한 빈칸 지우는 코드 
+		    	hospital.h_name.gsub(/\s+/,"")	
+
 		    	hospital.save
 	    	else
 
