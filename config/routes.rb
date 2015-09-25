@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :events
+  #resources :events
+  
   get 'albums/new'
 
   get 'sessions/new'
@@ -12,9 +13,12 @@ Rails.application.routes.draw do
 
   get    'h_create'=> 'hospitals#new'
 
-  resources :users
+  resources :users do
+    resources :reviews
+  end
   resources :hospitals do 
     resources :meetings
+    resources :reviews
   end
   #resources :reservations
   #resources :talks

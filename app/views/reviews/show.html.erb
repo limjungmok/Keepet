@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>R title:</strong>
+  <%= @review.r_title %>
+</p>
+
+<p>
+  <strong>R content:</strong>
+  <%= @review.r_content %>
+</p>
+
+<%= link_to 'Edit', edit_hospital_review_path(:hospital_id => params[:hospital_id], :id => params[:id]) %> |
+<%= link_to 'Back', hospital_path(:id=> params[:hospital_id]) %>
