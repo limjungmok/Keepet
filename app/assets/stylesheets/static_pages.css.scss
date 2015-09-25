@@ -34,7 +34,12 @@ a {
 }
 
 a:hover {
+<<<<<<< HEAD
+	color: white;
+	text-decoration: none;
+=======
    color: white;
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821
 }
 
 #sample5_address {
@@ -64,6 +69,22 @@ a:hover {
 }
 
 .home_hospital_picture {
+<<<<<<< HEAD
+	.col-xs-3 {
+		.thumbnail {
+			img {
+				height: 250px;
+			}
+			width: 250px;
+			margin: 0;
+			padding : 0;
+		}
+		height: 380px;
+		
+	}
+
+	margin: 5% 10% 0 10%;
+=======
    .col-xs-3 {
       .thumbnail img{
          height: 250px;
@@ -73,6 +94,7 @@ a:hover {
    }
 
    margin: 5% 10% 0 10%;
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821
 }
 
 .picture_top {
@@ -91,3 +113,7 @@ img {
 #anchor{
 
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 38e0d4137b407f99ace221f6c267d088c6412821
