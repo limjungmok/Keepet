@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923063335) do
+ActiveRecord::Schema.define(version: 20150925065724) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "a_photo"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20150923063335) do
     t.float    "h_latitude"
     t.float    "h_lontitude"
     t.integer  "count",       default: 0
+    t.float    "grade"
+    t.float    "avg_grade"
   end
 
   create_table "meetings", force: :cascade do |t|
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150923063335) do
     t.integer  "user_id"
     t.integer  "hospital_id"
     t.string   "r_user_name"
+    t.float    "grade"
   end
 
   create_table "talks", force: :cascade do |t|
