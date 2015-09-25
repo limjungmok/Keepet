@@ -44,18 +44,24 @@ class HospitalsController < ApplicationController
 		@hospitals_array = []
 		@hospitals.each do |hospital|
 			if hospital.h_phone == ""
-	    		hospital.h_phone = "없음"
+	    		hospital.h_phone = " "
 	    	end
+
+	    	#폐업한 동물병원 xy 0으로 만들기
 	    	if hospital.h_latitude.nil?
 	    		hospital.h_latitude = 0
 	    	end
 	    	if hospital.h_lontitude.nil?
 	    		hospital.h_lontitude = 0
 	    	end
-			array = [hospital.h_name, hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude]
+
+	    	#동물병원 이름 공백 없애기   ->   .gsub(/\s+/, ""
+	    	real_hospital_address = hospital.h_address.gsub("서울특별시","").gsub("1","").gsub("2","").gsub("3","").gsub("4","").gsub("5","").gsub("6","").gsub("7","").gsub("8","").gsub("9","").gsub("0","").gsub("번지","").gsub("호","").gsub("층","").gsub("지하","").gsub("아카데미스위트 A동","").gsub("외 필지","").gsub("오성빌딩","").gsub("지상, 일부","").gsub("강남힐스테이트에코","").gsub(",","").gsub("덕산빌딩","").gsub("-","").gsub("지상","").gsub("일부","").gsub("강남리더스프라자","").gsub("풍림아이원레몬","")
+	    	hospital.h_address = real_hospital_address
+	    	#real_hospital_addr
+			array = [hospital.h_name.gsub(/\s+/, "") , hospital.h_address, hospital.h_phone, hospital.h_latitude, hospital.h_lontitude, hospital.id]
 			@hospitals_array.push array
 		end
-		
 	end
 
 	def edit
@@ -90,7 +96,7 @@ class HospitalsController < ApplicationController
 
 	    @hospital.each do |h|
 	    	if(h["TRD_STATE_GBN_CTN"] == "정상")
-		    	hospital = Hospital.new(:h_name => h["WRKP_NM"], :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
+		    	hospital = Hospital.new(:h_name => h["WRKP_NM"].gsub(/\s+/, ""), :h_address => h["SITE_ADDR"], :h_phone => h["SITE_TEL"])
 
 		    	get_json_location(hospital.h_address)
 		    	
@@ -120,3 +126,4 @@ class HospitalsController < ApplicationController
 	    @userquery = JSON.parse(@response_location.body)["result"]["userquery"] unless JSON.parse(@response_location.body)["result"].nil?
 	end
 end
+
