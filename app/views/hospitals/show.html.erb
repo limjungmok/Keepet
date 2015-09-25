@@ -3,60 +3,128 @@
     <title></title>
 </head>
 <body>
+    <div class="row", id="hospital_info">
+      
+      <div class="col-md-4", id="hospital_album">
+        <%= image_tag "hospital1.JPG" , :width => "280px", :height => "280px" %>
+      </div>
+      
+      <div class="col-md-8", id="hospital_detail">
+        <div id="hospital_detail_name">
+          <%=@hospital.h_name %>
+        </div>
+        <hr>
+        
+        <div class="col-md-6", id="hospital_detail_left" style="line-height:30px;">
+          주소<br>
+          전화번호<br>
+          진료시간
+        </div>
 
-	<div class="row", id="hospital_info">
-	  <div class="col-md-4", id="hospital_album">
-		<%= image_tag "hospital1.JPG" , :width => "280px", :height => "280px" %>
-	  </div>
-	  <div class="col-md-8", id="hospital_detail">
-		<div id="hospital_detail_name"><%=@hospital.h_name %></div><br>
-		<div id="hospital_detail_address">병원주소 : <%=@hospital.h_address %></div>
-		<div id="hospital_detail_phone">병원번호 : <%=@hospital.h_phone %></div><br>
-		
-	  </div>
-	</div>
+        <div class="col-md-6", id="hospital_detail_right" style="line-height:30px;">
+          <div id="hospital_detail_address">
+            <%=@hospital.h_address %>
+          </div>
+          
+          <div id="hospital_detail_phone">
+            <%if @hospital.h_phone.blank?%>
+              없음
+            <% else %>
+              <%=@hospital.h_phone %>
+            <% end %>
+          </div>
+          
+          <div id="hospital_detail_chart">
+            평일 09:00 ~ 18:00<br>
+            점심시간 12:00 ~ 13:00<br>
+            토요일 09:00~16:00<br>
+            * 공휴일 휴무
+          </div><br>
+          
+        </div>
 
-	<div id="hospital_option">
-		<ul class="nav nav-tabs">
-			<li class="active">
-				<a href="#calendar" data-toggle="tab" aria-expanded="false">예약하기</a>
-			</li>
-			<li class="review"><a href="#review" data-toggle="tab">후기게시판</a></li>
-	  	</ul>
-	  	<div id="hr_calendar"><hr></div>
+        <div id="hospital_detail_price">
+          가격정보
+        </div><br>
 
-		<div id="myTabContent" class="tab-content">
-			<div class="tab-pane fade active in" id="calendar">
+        <div id="hospital_detail_option">
+          소형견 - 1일 10,000원 / 7일 65,000원 / 최대 3주<br>
+          대형견 - 1일 15,000원 / 7일 100,000원 / 최대 2주<br>
+          * 자세한 사항은 방문 및 전화문의
+        </div>
+      </div>
+    </div>
 
-				<div>
-					<%= month_calendar events: @meetings do |date, meetings| %>
-					  <%= date.strftime("%d") %><br>	  
-						<% if meetings.count < 5 %>
-						  	<p style="color:#aaa">예약가능</p>
-						  		<% elsif meetings.count >= 5 && meetings.count < 10 %>
-						  			<p style="color:#feb650">예약포화</p>
-						  			<% elsif meetings.count >= 10 %>
-						  			<p style="color:#fd915f">예약불가</p>
-						<% end %>
+    <div id="hospital_option">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#calendar" data-toggle="tab" aria-expanded="false">예약하기</a>
+            </li>
+            <li class="review"><a href="#review" data-toggle="tab">후기게시판</a></li>
+        </ul>
+        
+        <div id="hr_calendar">
+          <hr>
+        </div>
 
-					<% end %>
-				</div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="calendar">
+                <div>
+                    <%= month_calendar events: @meetings do |date, meetings| %>
+                      <%= date.strftime("%d") %><br>
+                        <% if meetings.count < 5 %>
+                              <p style="color:#aaa">예약가능</p>
+                                  <% elsif meetings.count >= 5 && meetings.count < 10 %>
+                                      <p style="color:#feb650">예약포화</p>
+                                      <% elsif meetings.count >= 10 %>
+                                      <p style="color:#fd915f">예약불가</p>
+                        <% end %>
 
-				<div id="reservation">
-					<div id="reservation_message">
-						<div id="message_title">예약하기</div><br>
-						<div id="message_detail">상단의 달력에서 예약 현황을 확인하신 후<br>
-						아래의 양식을 채워주세요.</div>
-					</div><br>
-					<%= render 'meetings/form' %>
-				</div>
-			</div>
+                    <% end %>
+                </div>
 
-  			<div class="tab-pane fade" id="review">
-  				<%= render 'hospitals/review' %>
-  			</div>
-		</div>
-	</div>
->>>>>>> yh
+                <div id="reservation">
+                    <div id="reservation_message">
+                        <div id="message_title">예약하기</div><br>
+                        <div id="message_detail">상단의 달력에서 예약 현황을 확인하신 후<br>
+                        아래의 양식을 채워주세요.</div>
+                    </div><br>
+                    <%= render 'meetings/form' %>
+                </div>
+            </div>
+
+          <div class="tab-pane fade" id="review">
+            
+            <table class="table-bordered table-hover">
+              <thead>
+                <tr id="review_tr">
+                  <th id="review_no">번호</th>
+                  <th id="review_title">제목</th>
+                  <th id="review_content">내용</th>
+                  <th id="review_name">글쓴이</th>
+                  <th id="review_time">작성시간</th>
+                </tr>
+              </thead>
+
+              <tbody id="review_tbody">
+                <% @reviews.each do |review| %>
+                  <tr>
+                      <td><%= review.id %></td>
+                      <td><%= review.r_title %></td>
+                      <td><%= review.r_content %></td>
+                      <td><%= review.r_user_name %></td>
+                      <td><%= timestamp_division(review) %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+
+            <br><hr>
+            <% if logged_in? %>
+            <%= link_to "후기 작성하기", new_hospital_review_path(:hospital_id => params[:id]) %>
+            <% end %>
+          </div>
+        </div>
+    </div>
 </body>
 </html>

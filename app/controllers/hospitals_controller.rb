@@ -27,6 +27,7 @@ class HospitalsController < ApplicationController
 		#@meetings = Meeting.all
 		@meetings = @hospital.meetings.all
 		@is_reservation = 0
+		@reviews = @hospital.reviews.all
 	end
 
 	def index

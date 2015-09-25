@@ -165,7 +165,7 @@ input {
 
 #hospital_info{
   width: 1000px;
-  height:300px;
+  height:500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -189,16 +189,14 @@ input {
   height: 280px;
   margin: 10px;
   padding-top: 20px;
-  padding-left: 20px;
   background-color: #fff;
-  color: #aaa;
-  font-weight: lighter;
+  color: #a0a0a0;
+  font-weight: 150;
 
 }
 
 #hospital_detail_name{
   font-size: 28px;
-  font-weight: bold;
   color: #222;
 }
 #hospital_detail_address{
@@ -208,6 +206,22 @@ input {
   font-size: 16px;
 }
 
+#hospital_detail_left{
+  width: 15%;
+  color: #222;
+  font-weight: normal;
+  padding-left: 0px;
+}
+#hospital_detail_right{
+  width: 85%;
+}
+#hospital_detail_price{
+  color: #222;
+  font-weight: normal;
+}
+
+#hospital_detail_option{
+}
 #hospital_option{
   width: 1000px;
   height: 1500px;
@@ -387,7 +401,7 @@ input {
 }
 #reservation{
   width: 800px;
-  margin-top: 600px;
+  margin-top: 500px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -476,3 +490,38 @@ input {
   border-color: #e1e1e1;
 }
 
+/*후기게시판*/
+#review{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table-bordered{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td{
+  text-align: center;
+  height: 25px;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td{
+  text-align: center;
+  height: 40px;
+}
+
+#review_no{
+  width: 5%
+}
+#review_title{
+  width: 30%;
+}
+#review_content{
+  width: 40%;
+}
+#review_name{
+  width: 10%;
+}
+#review_time{
+  width: 10%;
+}
