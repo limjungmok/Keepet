@@ -1,4 +1,46 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+
+/*후기게시판*/
+#review{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table-bordered{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td{
+  text-align: center;
+  height: 25px;
+}
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td{
+  text-align: center;
+  height: 40px;
+}
+
+#review_no{
+  width: 5%
+}
+#review_title{
+  width: 30%;
+}
+#review_content{
+  width: 40%;
+}
+#review_name{
+  width: 10%;
+}
+#review_time{
+  width: 10%;
+}
+
+#review_new_title{
+  width: 300px;
+  height: 100px;
+}
+#review_new_content{
+  width: 300px;
+}#review_new_grade{
+  width: 150px;
+}
