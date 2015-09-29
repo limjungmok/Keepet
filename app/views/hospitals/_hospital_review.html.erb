@@ -1,0 +1,30 @@
+  <table class="table-bordered table-hover">
+              <thead>
+                <tr id="review_tr">
+                  <th id="review_no">번호</th>
+                  <th id="review_title">제목</th>
+                  <th id="review_content">내용</th>
+                  <th id="review_name">글쓴이</th>
+                  <th id="review_grade">별점</th>
+                  <th id="review_time">작성시간</th>
+                </tr>
+              </thead>
+
+              <tbody id="review_tbody">
+                <% @reviews.each do |review| %>
+                  <tr>
+                      <td><%= review.id %></td>
+                      <td><%= review.r_title %></td>
+                      <td><%= review.r_content %></td>
+                      <td><%= review.r_user_name %></td>
+                      <td><%= review.grade%></td>
+                      <td><%= timestamp_division(review) %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+
+            <br><hr>
+            <% if logged_in? %>
+            <%= link_to "후기 작성하기", new_hospital_review_path(:hospital_id => params[:id]) %>
+            <% end %>
