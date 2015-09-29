@@ -28,6 +28,19 @@ class HospitalsController < ApplicationController
 		@meetings = @hospital.meetings.all
 		@is_reservation = 0
 		@reviews = @hospital.reviews.all
+		
+		@hospital.avg_grade = 0
+		
+		@reviews.each do|review|	
+			@hospital.avg_grade += review.grade
+		end
+
+		if @reviews.count == 0
+			@hospital.avg_grade = 0
+		else
+			@hospital.avg_grade = @hospital.avg_grade / @reviews.count
+		end
+		
 	end
 
 	def index

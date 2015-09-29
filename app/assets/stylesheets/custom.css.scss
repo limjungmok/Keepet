@@ -192,9 +192,12 @@ input {
   background-color: #fff;
   color: #a0a0a0;
   font-weight: 150;
-
 }
-
+#hospital_grade_text{
+  margin-left: 10px;
+  color: #555;
+  font-weight: 100px;
+}
 #hospital_detail_name{
   font-size: 28px;
   color: #222;
@@ -432,7 +435,7 @@ input {
   color: #333;
 }
 .reservation_name{
-  background-color: #5ac6da;
+  background-color: #66ccb9;
   border-color: transparent;
   color: #fff;
   width: 75px;
@@ -524,4 +527,14 @@ input {
 }
 #review_time{
   width: 10%;
+}
+
+#review_new_title{
+  width: 300px;
+  height: 100px;
+}
+#review_new_content{
+  width: 300px;
+}#review_new_grade{
+  width: 150px;
 }
