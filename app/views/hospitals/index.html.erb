@@ -20,11 +20,77 @@
                                 <%= h.h_address %>
                             </div>
 
-                            <div id = "h_phone">
-                                <%= h.h_phone %>
+                            <div>
+                              <div id="hospital_avg_grade">
+                                  <% if h.avg_grade == 5 %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>            
+                                    </div>
+                                  <% elsif h.avg_grade >= 4 && h.avg_grade < 5 %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>          
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>            
+                                    </div>
+                                  <% elsif h.avg_grade >= 3 && h.avg_grade < 4 %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>
+                                    </div>
+                                  <% elsif h.avg_grade >= 2 && h.avg_grade < 3 %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>          
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>            
+                                    </div>
+                                  <% elsif h.avg_grade >= 1 && h.avg_grade < 2 %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_activated.png" , :width => "18px", :height => "16px" %>          
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>            
+                                    </div>
+                                  <% else %>
+                                    <div id="hospital_grade_info">
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <%= image_tag "map_grade_dimmed.png" , :width => "18px", :height => "16px" %>
+                                      <span id="h_grade_font">
+                                        <%= h.avg_grade.round(1) %>점 | <%= h.reviews.count%>명
+                                      </span>            
+                                    </div>
+                                  <% end %> 
+                                </div>
                             </div>
-                        </div>
-                        <br>
                     </a>
                 </div>
             <% end %>

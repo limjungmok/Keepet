@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /* mixins, variables, etc. */
 
@@ -25,6 +26,7 @@ $gray-medium-light: #eaeaea;
   color: #222;
 }
 body {
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 section {
