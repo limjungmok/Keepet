@@ -1,0 +1,67 @@
+          <% if @hospital.avg_grade == 5 %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>            
+            </div>
+          <% elsif @hospital.avg_grade >= 4 && @hospital.avg_grade < 5 %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>            
+            </div>
+          <% elsif @hospital.avg_grade >= 3 && @hospital.avg_grade < 4 %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>
+            </div>
+          <% elsif @hospital.avg_grade >= 2 && @hospital.avg_grade < 3 %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>            
+            </div>
+          <% elsif @hospital.avg_grade >= 1 && @hospital.avg_grade < 2 %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>            
+            </div>
+          <% else %>
+            <div id="hospital_grade_info">
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
+              <span id="hospital_grade_text">
+                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
+              </span>            
+            </div>
+          <% end %> 

@@ -14,73 +14,7 @@
           <%=@hospital.h_name %>
         </div>
         <div id="hospital_avg_grade">
-          <% if @hospital.avg_grade == 5 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 4 && @hospital.avg_grade < 5 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 3 && @hospital.avg_grade < 4 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>
-            </div>
-          <% elsif @hospital.avg_grade >= 2 && @hospital.avg_grade < 3 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 1 && @hospital.avg_grade < 2 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% else %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% end %> 
+          <%= render 'hospital_grade' %>
         </div>
         <hr>
         
@@ -152,7 +86,6 @@
                         
                     <% end %>
                 </div>
-
                 <div id="reservation">
                     <div id="reservation_message">
                         <div id="message_title">예약하기</div><br>
@@ -162,39 +95,8 @@
                     <%= render 'meetings/form' %>
                 </div>
             </div>
-
           <div class="tab-pane fade" id="review">
-            
-            <table class="table-bordered table-hover">
-              <thead>
-                <tr id="review_tr">
-                  <th id="review_no">번호</th>
-                  <th id="review_title">제목</th>
-                  <th id="review_content">내용</th>
-                  <th id="review_name">글쓴이</th>
-                  <th id="review_grade">별점</th>
-                  <th id="review_time">작성시간</th>
-                </tr>
-              </thead>
-
-              <tbody id="review_tbody">
-                <% @reviews.each do |review| %>
-                  <tr>
-                      <td><%= review.id %></td>
-                      <td><%= review.r_title %></td>
-                      <td><%= review.r_content %></td>
-                      <td><%= review.r_user_name %></td>
-                      <td><%= review.grade%></td>
-                      <td><%= timestamp_division(review) %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-
-            <br><hr>
-            <% if logged_in? %>
-            <%= link_to "후기 작성하기", new_hospital_review_path(:hospital_id => params[:id]) %>
-            <% end %>
+            <%= render 'hospital_review' %>
           </div>
         </div>
     </div>
