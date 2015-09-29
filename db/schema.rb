@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20150925065724) do
     t.float    "h_latitude"
     t.float    "h_lontitude"
     t.integer  "count",       default: 0
-    t.float    "grade"
     t.float    "avg_grade"
   end
 
