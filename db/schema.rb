@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925065724) do
+ActiveRecord::Schema.define(version: 20150929031035) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "a_photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "hospital_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -44,6 +54,8 @@ ActiveRecord::Schema.define(version: 20150925065724) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "hospital_id"
+    t.string   "phone"
+    t.string   "requirement"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -62,6 +74,12 @@ ActiveRecord::Schema.define(version: 20150925065724) do
     t.integer  "hospital_id"
     t.string   "r_user_name"
     t.float    "grade"
+  end
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "t_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

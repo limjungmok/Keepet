@@ -38,7 +38,7 @@ class HospitalsController < ApplicationController
 		if @reviews.count == 0
 			@hospital.avg_grade = 0
 		else
-			@hospital.avg_grade = @hospital.avg_grade / @reviews.count
+			@hospital.avg_grade = (@hospital.avg_grade / @reviews.count)
 		end
 		
 	end
