@@ -1,0 +1,50 @@
+
+  <% if review.grade == 5 %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% elsif review.grade >= 4 && review.grade < 5 %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>          
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% elsif review.grade >= 3 && review.grade < 4 %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% elsif review.grade >= 2 && review.grade < 3 %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>          
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% elsif review.grade >= 1 && review.grade < 2 %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_on.png" , :width => "20px", :height => "15px" %>          
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% else %>
+    <div id="hospital_grade_info">
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+      <%= image_tag "grade_off.png" , :width => "20px", :height => "15px" %>
+    </div>
+  <% end %>

@@ -12,7 +12,7 @@ module HospitalsHelper
 			(difference/3600).to_i.to_s + "시간전"
 		# 하루 전 ~ 과거
 		else
-			review.created_at.strftime("%Y/%m/%d")
+			review.created_at.strftime("%y-%m-%d")
 		end
 	end
 end
