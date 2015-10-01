@@ -1,7 +1,6 @@
 // Place all the styles related to the Hospitals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .col-xs-9{
 	padding-right: 0px;
 	padding-left: 0px;
@@ -13,19 +12,22 @@
    &:hover {
       text-decoration: none;
    }
-}
-
-#h_name {
-   max-width:    257px;   
+   a{
+    text-decoration: none;
+   }
+   a:hover{
+    text-decoration: none;
+   }
 }
 
 .h_body {
-   background-color: white;
-   border-top-left-radius: 7px;
-    border-top-right-radius: 7px; 
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px; 
-    padding : 1em;
+  background-color: #ffffff;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px; 
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px; 
+  padding : 1em;
+  margin-bottom: 15px;
 
     border:4px solid #ffffff;
    &:hover {
@@ -33,16 +35,34 @@
    }
 }
 
+#h_name {
+  max-width:    257px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #555555;
+}
+
+#h_address{
+  font-size: 14px;
+  color: #555555;
+}
+
+#h_grade_font{
+  font-size: 10px;
+  color: #555555;
+}
+
+
 .jQuery_hover{
    border:4px solid #66ccb9;
 }
 
 #map_margin_top{
-   margin-top: 3%;
+   margin-top: 50px;
 }
 
 .map_page_right{
-   padding: 0em 0em 1em 1em;
+   padding: 0px 0px 12px 24px;
    height: 840px;
    overflow-y: auto;
    bakcground-color: #E8E8E8;
@@ -53,8 +73,6 @@
 
 
 /* hospital show information*/
-
-
 #hospital_info{
   width: 1000px;
   height:500px;

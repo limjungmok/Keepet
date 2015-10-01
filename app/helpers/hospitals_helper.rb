@@ -15,4 +15,25 @@ module HospitalsHelper
 			review.created_at.strftime("%y-%m-%d")
 		end
 	end
+
+
+	def hospital_score(hospital)
+		@hospital = Hospital.find(params[:id])
+		#@meetings = Meeting.all
+		@meetings = @hospital.meetings.all
+
+		@reviews = @hospital.reviews.all
+		
+		@hospital.avg_grade = 0
+		
+		@reviews.each do|review|	
+			@hospital.avg_grade += review.grade
+		end
+
+		if @reviews.count == 0
+			@hospital.avg_grade = 0
+		else
+			@hospital.avg_grade = (@hospital.avg_grade / @reviews.count)
+		end
+	end
 end
