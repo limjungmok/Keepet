@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 Started GET "/" for ::1 at 2015-09-25 18:08:58 +0900
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by StaticPagesController#home as HTML
@@ -49081,5 +49078,3 @@ Processing by HospitalsController#index as HTML
   Rendered layouts/_header.html.erb (0.3ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 157ms (Views: 150.3ms | ActiveRecord: 0.4ms)
-=======
->>>>>>> 94407a1d3ce908c20ff7e93d3d2a33584374b229
