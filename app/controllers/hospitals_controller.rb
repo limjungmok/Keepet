@@ -26,7 +26,7 @@ class HospitalsController < ApplicationController
 		@hospital = Hospital.find(params[:id])
 		#@meetings = Meeting.all
 		@meetings = @hospital.meetings.all
-		@is_reservation = 0
+
 		@reviews = @hospital.reviews.all
 		
 		@hospital.avg_grade = 0
@@ -38,14 +38,32 @@ class HospitalsController < ApplicationController
 		if @reviews.count == 0
 			@hospital.avg_grade = 0
 		else
-			@hospital.avg_grade = @hospital.avg_grade / @reviews.count
+			@hospital.avg_grade = (@hospital.avg_grade / @reviews.count)
 		end
 		
 	end
 
 	def index
 		@hospitals = Hospital.all
+		@hospitals.each do |hospital|
+			@reviews = hospital.reviews.all
+			
+			hospital.avg_grade = 0
+			hospital.save
+			@reviews.each do|review|	
+				hospital.avg_grade += review.grade
+				hospital.save
+			end
 
+			if @reviews.count == 0
+				hospital.avg_grade = 0
+				hospital.save
+			else
+				hospital.avg_grade = (hospital.avg_grade / @reviews.count)
+				hospital.save
+			end
+		end
+		
 		#총 동물병원 수 = @hospital_count
 		@hospital_count = 0
 		@hospitals.each do |h|

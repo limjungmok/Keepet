@@ -14,73 +14,7 @@
           <%=@hospital.h_name %>
         </div>
         <div id="hospital_avg_grade">
-          <% if @hospital.avg_grade == 5 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 4 && @hospital.avg_grade < 5 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 3 && @hospital.avg_grade < 4 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>
-            </div>
-          <% elsif @hospital.avg_grade >= 2 && @hospital.avg_grade < 3 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% elsif @hospital.avg_grade >= 1 && @hospital.avg_grade < 2 %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_on.png" , :width => "25px", :height => "20px" %>          
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% else %>
-            <div id="hospital_grade_info">
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <%= image_tag "grade_off.png" , :width => "25px", :height => "20px" %>
-              <span id="hospital_grade_text">
-                <%= @hospital.avg_grade.round(1) %>점 | <%= @hospital.reviews.count%>명
-              </span>            
-            </div>
-          <% end %> 
+          <%= render 'hospital_grade' %>
         </div>
         <hr>
         
@@ -129,7 +63,7 @@
             <li class="active">
                 <a href="#calendar" data-toggle="tab" aria-expanded="false">예약하기</a>
             </li>
-            <li class="review"><a href="#review" data-toggle="tab">후기게시판</a></li>
+            <li class="review"><a href="#review" data-toggle="tab">후기게시판 (<%=@reviews.count%>)</a></li>
         </ul>
         
         <div id="hr_calendar">
@@ -140,6 +74,7 @@
             <div class="tab-pane fade active in" id="calendar">
                 <div>
                     <%= month_calendar events: @meetings do |date, meetings| %>
+  
                       <%= date.strftime("%d") %><br>
                         <% if meetings.count < 5 %>
                               <p style="color:#aaa">예약가능</p>
@@ -148,10 +83,9 @@
                                       <% elsif meetings.count >= 10 %>
                                       <p style="color:#fd915f">예약불가</p>
                         <% end %>
-
+                        
                     <% end %>
                 </div>
-
                 <div id="reservation">
                     <div id="reservation_message">
                         <div id="message_title">예약하기</div><br>
@@ -161,9 +95,7 @@
                     <%= render 'meetings/form' %>
                 </div>
             </div>
-
-          <div class="tab-pane fade" id="review">
-            
+          <div class="tab-pane fade" id="review">          
             <table class="table-bordered table-hover">
               <thead>
                 <tr id="review_tr">
@@ -193,8 +125,12 @@
             <br><hr>
             <% if logged_in? %>
             <% end %>
+            <%= render 'hospital_review' %>
           </div>
         </div>
     </div>
 </body>
+<script>
+  $('.reservation_name').attr('disabled','disabled');
+</script>
 </html>

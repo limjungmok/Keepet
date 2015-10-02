@@ -58,10 +58,12 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
+    @hospital = Hospital.find(params[:hospital_id])
+    @review = @hospital.reviews.find(params[:id])
     @review.destroy
     respond_to do |format|
       flash[:success] = "삭제 성공"
-      format.html { redirect_to :back }
+      format.html { redirect_to @hospital }
       format.json { head :no_content }
     end
   end

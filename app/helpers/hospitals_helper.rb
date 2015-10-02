@@ -12,7 +12,28 @@ module HospitalsHelper
 			(difference/3600).to_i.to_s + "시간전"
 		# 하루 전 ~ 과거
 		else
-			review.created_at.strftime("%Y/%m/%d")
+			review.created_at.strftime("%y-%m-%d")
+		end
+	end
+
+
+	def hospital_score(hospital)
+		@hospital = Hospital.find(params[:id])
+		#@meetings = Meeting.all
+		@meetings = @hospital.meetings.all
+
+		@reviews = @hospital.reviews.all
+		
+		@hospital.avg_grade = 0
+		
+		@reviews.each do|review|	
+			@hospital.avg_grade += review.grade
+		end
+
+		if @reviews.count == 0
+			@hospital.avg_grade = 0
+		else
+			@hospital.avg_grade = (@hospital.avg_grade / @reviews.count)
 		end
 	end
 end

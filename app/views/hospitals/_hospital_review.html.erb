@@ -1,0 +1,32 @@
+<div id="hospital_review">
+  <% @reviews.each do|review| %>
+    <div class="row">
+
+      <div class="col-md-4", id="hospital_review_user">
+
+        <div id="hospital_review_user_name">
+        <%= review.r_user_name %><br>
+        </div>
+        <%= render 'hospitals/hospital_review_grade', :review => review %>
+        <%= link_to image_tag('review_modify_btn.png', :width=> '17.5px', :height=>'12.5px'), "#" %>
+        <%= link_to image_tag('review_delete_btn.png', :width=> '17.5px', :height=>'12.5px'), hospital_review_path(:hospital_id => params[:id], :id => review.id) , method: :delete, data: {confirm: "삭제하시겠습니까?"}%>
+
+      </div>
+      <div class="col-md-8", id="hospital_review_content">
+        <div id="hospital_review_text">
+          <%= review.r_content %><br>
+        </div><br>
+        <div id="hospital_review_time">
+          <%= timestamp_division(review)%>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+
+  <div id="hospital_review_input">
+    <% if logged_in? %>
+      <%= render 'reviews/form' %>
+    <% end %>
+  </div>
+</div>

@@ -30,10 +30,11 @@ class MeetingsController < ApplicationController
     respond_to do |format|
       if @meeting.save
         flash[:success] = "예약 성공"
-        format.html { redirect_to @hospital}
+        format.html { redirect_to @hospital }
         format.json { render :show, status: :created, location: @meeting }
       else
-        format.html { render :new }
+        flash[:danger] = "예약 실패"
+        format.html { redirect_to @hospital }
         format.json { render json: @meeting.errors, status: :unprocessable_entity }
       end
     end
@@ -71,6 +72,6 @@ class MeetingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meeting_params
-      params.require(:meeting).permit(:name, :start_time)
+      params.require(:meeting).permit(:name, :start_time, :phone, :requirement)
     end
 end

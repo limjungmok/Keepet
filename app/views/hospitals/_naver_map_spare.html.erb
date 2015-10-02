@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    /*
+        oMap.attach('mouseleave', function(oCustomEvent) {
+                var oTarget = oCustomEvent.target;
+                
+                $("div.h_body#" + title).addClass("jQuery_hover");
+                }, function(){
+                    $("div.h_body#" + title).removeClass("jQuery_hover");
+                }
+                // 마커위에서 마우스 나간거면
+                if (oTarget instanceof nhn.api.map.Marker) {
+                        oLabel.setVisible(false);      
+                }
+        });
+
+        //아무 곳이나 클릭하면 마커가 새로 생성
+        var oMarker = new nhn.api.map.Marker(oIcon, { title : '마커 : ' + oPoint.toString() });
+        oMarker.setPoint(oPoint);
+        oMap.addOverlay(oMarker);
+        });
+        
+        //클릭하면 대화상자 표시
+        var mapInfoTestWindow = new nhn.api.map.InfoWindow(); // - info window 생성
+        mapInfoTestWindow.setVisible(false); // - infowindow 표시 여부 지정.
+        oMap.addOverlay(mapInfoTestWindow);     // - 지도에 추가.
+        oMap.attach('click', function(oCustomEvent) {
+            oPoint = oCustomEvent.point;
+            var oTarget = oCustomEvent.target;
+            mapInfoTestWindow.setVisible(false);
+            // 마커 클릭하면
+            if (oTarget instanceof nhn.api.map.Marker) {
+                // 마커 클릭시 지도 중앙에 배치하기
+                oMap.setCenter(oPoint);
+
+                // 겹침 마커 클릭한거면
+                if (oCustomEvent.clickCoveredMarker) {
+                    return;
+                }
+                
+                // - InfoWindow 에 들어갈 내용은 setContent 로 자유롭게 넣을 수 있습니다. 외부 css를 이용할 수 있으며, 
+                // - 외부 css에 선언된 class를 이용하면 해당 class의 스타일을 바로 적용할 수 있습니다.
+                // - 단, DIV 의 position style 은 absolute 가 되면 안되며, 
+                // - absolute 의 경우 autoPosition 이 동작하지 않습니다. 
+
+                mapInfoTestWindow.setContent('<DIV style="color:#ffffff; border-radius:5px;   padding:10px; color:black; background-color:white; width:auto; height:auto;">' +
+                '<span style="color: #000000 !important;display: inline-block;font-size: 12px !important;font-weight: bold !important;letter-spacing: -1px !important;white-space: nowrap !important; padding: 2px 2px 2px 2px !important">' + "클릭하셨습니다." +'</span></div>' + '<div style="left:50%; margin-left:-18px; border-right :18px solid transparent; border-top:18px solid #ffffff;  border-left : 18px solid transparent; position:absolute;  width:0; height:0;"></div>');
+                mapInfoTestWindow.setPoint(oTarget.getPoint());
+                mapInfoTestWindow.setVisible(true);
+                mapInfoTestWindow.setPosition({right : -60, top : 52});
+                mapInfoTestWindow.autoPosition();
+
+                return;
+            }
+        });
+        */    
+</script>
