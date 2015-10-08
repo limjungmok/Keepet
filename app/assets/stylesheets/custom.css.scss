@@ -54,11 +54,12 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 0.7em;
   color: white;
   letter-spacing: -1px;
   margin-top: 10px;
   font-weight: bold;
+  vertical-align: center;
   &:hover {
     color: #222;
     text-decoration: none;

@@ -31,7 +31,9 @@
 
     border:4px solid #ffffff;
    &:hover {
-      border:4px solid #66ccb9;
+      border:4px solid #66ccb9
+
+      ;
    }
 }
 
@@ -91,7 +93,6 @@
 #hospital_album{
   width: 300px;
   height: 300px;
-
 }
 
 #hospital_detail{
@@ -100,37 +101,32 @@
   margin: 10px;
   padding-top: 20px;
   background-color: #fff;
-  color: #a0a0a0;
-  font-weight: 150;
+  color: #555555;
+  font-weight: 100;
 }
 #hospital_grade_text{
   margin-left: 10px;
-  color: #555;
+  color: #555555;
   font-weight: 100px;
 }
 #hospital_detail_name{
   font-size: 28px;
-  color: #222;
-}
-#hospital_detail_address{
-  font-size: 16px;
-}
-#hospital_detail_phone{
-  font-size: 16px;
+  color: #555555;
+  font-weight: 700;
 }
 
 #hospital_detail_left{
   width: 15%;
-  color: #222;
-  font-weight: normal;
+  color: #555555;
+  font-weight: bold;
   padding-left: 0px;
 }
 #hospital_detail_right{
   width: 85%;
 }
 #hospital_detail_price{
-  color: #222;
-  font-weight: normal;
+  color: #555555;
+  font-weight: bold;
 }
 
 #hospital_detail_option{
@@ -475,7 +471,12 @@
 }
 
 #search_location {
-  margin-left: 50px;
+  margin-left: 30px;
   position: relative;
   z-index: 2;
+  background: url(map_location_btn.png);
+  background-repeat: no-repeat;
+  border: transparent;
+  line-height: 2.5em;
+  outline: transparent;
 }
