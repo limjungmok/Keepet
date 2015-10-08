@@ -58,7 +58,7 @@
 }
 
 #map_margin_top{
-   margin-top: 50px;
+   margin-top: -6%;
 }
 
 .map_page_right{
@@ -452,4 +452,30 @@
   margin-right: auto;
 }
 #hospital_review_input_content{
+}
+
+#search_box_index {
+    width:230px;
+    margin-top: 8%;
+    margin-left: 1%;
+    position: relative;
+    border: 0;
+    border-radius: 30px;
+    line-height: 2.5em;
+    outline: transparent;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.search_icon_index {
+  margin-top: -0.1%;
+  margin-left: -3.5%;
+  position: relative;
+  z-index: 2;
+}
+
+#search_location {
+  margin-left: 50px;
+  position: relative;
+  z-index: 2;
 }

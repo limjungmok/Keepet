@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20150929031035) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "hospital_id"
+  end
+
   create_table "hospitals", force: :cascade do |t|
     t.string   "h_name"
     t.string   "h_phone"
@@ -34,6 +44,7 @@ ActiveRecord::Schema.define(version: 20150929031035) do
     t.float    "h_latitude"
     t.float    "h_lontitude"
     t.integer  "count",       default: 0
+    t.float    "grade"
     t.float    "avg_grade"
   end
 
@@ -63,6 +74,12 @@ ActiveRecord::Schema.define(version: 20150929031035) do
     t.integer  "hospital_id"
     t.string   "r_user_name"
     t.float    "grade"
+  end
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "t_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
