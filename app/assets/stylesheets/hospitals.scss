@@ -60,12 +60,12 @@
 }
 
 #map_margin_top{
-   margin-top: -6%;
+   margin-top: -5.5%;
 }
 
 .map_page_right{
    padding: 0px 0px 12px 24px;
-   height: 840px;
+   height: 800px;
    overflow-y: auto;
    bakcground-color: #E8E8E8;
 }
@@ -84,6 +84,7 @@
   margin-bottom: 30px;
   background-color: #fff;
   border-color: #000;
+  border-radius: 5px;
   img{
     margin-bottom: 10px;
     margin-top: 10px;
@@ -127,6 +128,7 @@
 #hospital_detail_price{
   color: #555555;
   font-weight: bold;
+  line-height: 2.2em;
 }
 
 #hospital_detail_option{
@@ -137,6 +139,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
+  border-radius: 5px;
 }
 
 /* Calendar */
@@ -155,6 +158,7 @@
 
 .nav-tabs{
   border: 0px;
+  font-weight: 700;
   a{
   color: #555;
   }
@@ -212,6 +216,7 @@
   font-weight: bold;
   cursor: pointer;
 }
+
 #hr_calendar{
   width: 950px;
   margin-left: auto;
@@ -273,6 +278,10 @@
    }
   .current-month {
     font-size: 16px;
+    font-weight: 700;
+    p {
+      font-weight: normal;
+    }
 
   }
   .start-date {
@@ -337,12 +346,13 @@
 #message_title{
   font-weight: bold;
   font-size: 35px;
+  color: #555555;
 }
 
 #message_detail{
   font-weight: 300;
   font-size: 18px;
-  color: #333;
+  color: #555555;
 }
 
 .reservation_name{
@@ -452,7 +462,7 @@
 
 #search_box_index {
     width:230px;
-    margin-top: 8%;
+    margin-top: 5.5%;
     margin-left: 1%;
     position: relative;
     border: 0;
@@ -479,4 +489,11 @@
   border: transparent;
   line-height: 2.5em;
   outline: transparent;
+}
+
+#hospital_detail_chart {
+  hr {
+    color: #e1e1e1;
+    width: 70%;
+  }
 }
