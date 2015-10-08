@@ -8,8 +8,8 @@
         <%= review.r_user_name %><br>
         </div>
         <%= render 'hospitals/hospital_review_grade', :review => review %>
-        <%= link_to image_tag('review_modify_btn.png', :width=> '17.5px', :height=>'12.5px'), "#" %>
-        
+        <%= link_to image_tag('review_modify_btn.png', :width=> '16px', :height=>'16px'), "#" %>
+        <%= link_to image_tag('review_delete_btn.png', :width=> '16px', :height=>'16px'), hospital_review_path(:hospital_id => params[:id], :id => review.id) , method: :delete, data: {confirm: "삭제하시겠습니까?"}%>
 
       </div>
       <div class="col-md-8", id="hospital_review_content">
