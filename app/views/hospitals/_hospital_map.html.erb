@@ -8,20 +8,20 @@
         <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=70554f5a78636e643739784d584f62"></script>
     </head>
     
-    <body>
+    <body onload="myLocation()">
+        
         <div class = "thumbnail" id = "testMap">
         </div>
         
         <script type="text/javascript">
-            
-            window.onload = myLocation;
 
             //현재 자기 위치 찾기 
             function myLocation() {
-                // 객체가 존재하면 
+                // 객체가 존재하면
+
                 if ( navigator.geolocation )
                 {
-                // getCurrentPostion 메서드를 호출 ( 위치를 가져오는 핸들러함수를 파라미터로 )  
+                    // getCurrentPostion 메서드를 호출 ( 위치를 가져오는 핸들러함수를 파라미터로 )  
                     navigator.geolocation.getCurrentPosition( showMap );
                 }
                 else          
@@ -31,6 +31,9 @@
             }
 
             function showMap( position ){
+
+                $("#testMap").empty();
+
                 //나래 이미지 마커에 씌우기
                 var h_marker_array = ["http://192.168.0.200:3001/assets/map_point_a-fe1231a73dae96402a46adfdbb32006c94803d9e7adc7eb13312066fa950415c.png", 'http://192.168.0.200:3001/assets/map_point_b-8ff568742d62bc33ee8d00d388b3bad580e5071c15ab0fd5a88912274af4ebd2.png', 'http://192.168.0.200:3001/assets/map_point_c-01aba9b59b9d06fd277e2fe9bb998a6b6e8c946bbfda798c8d6371942e175311.png', 'http://192.168.0.200:3001/assets/map_point_d-8e041a626a86684b9ad8109a419c4cf355d2762205972edd5c6ccbaf99a23c70.png', 'http://192.168.0.200:3001/assets/map_point_f-01baa9c1badebfceb9a265f6336337d5a81044407bb281a90b044e7598b21a4e.png', 'http://192.168.0.200:3001/assets/map_point_g-ea021f30f0e05e26ebac1dd1f646407ee9b0796168c93f86d5c4b8a092dd590f.png', 'http://192.168.0.200:3001/assets/map_point_h-556ad1cae6f99666cc9d8720c0cea82d0d8d49c4e2b589e693309cdbdf973fb4.png', 'http://192.168.0.200:3001/assets/map_point_i-8b9bda7e931d2cbc82971f2994162fa310ed8026e08778c51b755d603719389a.png', 'http://192.168.0.200:3001/assets/map_point_j-d36fe0556649b641f8ce7c2d49c3417659012c15069c3137ece670e84199d201.png', 'http://192.168.0.200:3001/assets/map_point_k-dbf32b74db506dd8066d30d82ab0b852ff31fb705b0a4c20463dd8e55a575c8c.png','http://192.168.0.200:3001/assets/map_point_l-3d9bccf231f573e2c5e0369a141e5a2d4b589184aba1d458dff6ade3737a039b.png', 'http://192.168.0.200:3001/assets/map_point_m-afaf8425bc3ad32f61b79460cd01eb4cd8472d23666c2a5281efcf99fe2078bd.png', 'http://192.168.0.200:3001/assets/map_point_n-a5400daff1e3714282494b05c110fa8edcc2e996c47dd8cffda7c2a69a85405e.png', 'http://192.168.0.200:3001/assets/map_point_o-5195da268bbea2140e3f14100a7ca90179f35fd3341e25c86d474f10aafcd100.png', 'http://192.168.0.200:3001/assets/map_point_p-ebf778ab36cfc4eed67fb128346a527baed1842bebc09b20ad561ac01ff1829c.png', 'http://192.168.0.200:3001/assets/map_point_q-f6efd7ae90fbac418eecf7115d75028735bce94ff5471f3fccad335567a0ff25.png', 'http://192.168.0.200:3001/assets/map_point_r-95b7de5951c8380c3202a298aa19562f1b03e43afe5590519ea6a99a445f5398.png', 'http://192.168.0.200:3001/assets/map_point_s-968fdb892753d2c998bda6dc174252a7b860ee8d95d76b75b050d593701a0678.png', 'http://192.168.0.200:3001/assets/map_point_t-0c1682ff7c7b708f0c3a20c4a3105912e9c8513bdc415e3dbc739bc3a7f17804.png', 'http://192.168.0.200:3001/assets/map_point_u-423966842b8883bf1e2e48c3d595c386ceef1012b975b2d907c3f32e050c33c1.png', 'http://192.168.0.200:3001/assets/map_point_v-28ee4a288be1a5d282b569427610d368970fa6ee05c3a1ceecc960e8ab46745b.png', 'http://192.168.0.200:3001/assets/map_point_w-61f43ec47e91fa1f92088ce0c6658f7a176604fcd2a53430bcad9565d0fc03e0.png', 'http://192.168.0.200:3001/assets/map_point_x-021c2e592a4ef39b6bd3e3b69a024fd92064c093e6c3bc684f980e997b505ecd.png', 'http://192.168.0.200:3001/assets/map_point_y-dc445dacb29707694559726a048437a0bb31bf5ffa14eeaee88b0b4307234f82.png', 'http://192.168.0.200:3001/assets/map_point_z-116c4a88d710df78e4be96b157ea7bb65dac36a128fbf5ef1d99c605902efaba.png']
 
@@ -128,7 +131,6 @@
                         oMap.setCenter(oPoint);
                         return;
                     }
-
                 });
             }
         </script>
