@@ -4,7 +4,7 @@
       <div class="col-md-4", id="hospital_review_user">
         <%= current_user.name %>
         <div id="review_new_grade">
-          <%= f.select :grade, [1,2,3,4,5]%>
+          <%= f.select :grade, ['★','★★','★★★','★★★★','★★★★★']%>
         </div>
       </div>
       <div class="col-md-8", id="hospital_review_input_content">
