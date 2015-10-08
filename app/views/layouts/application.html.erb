@@ -18,10 +18,7 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 0d7cb27f4c709523238bd8ac6bb0d1d1de01488d
+
 
     <!-- 루드 페이지 이외에 모두 적용 -->
     <% else %>
@@ -31,6 +28,8 @@
         <% end %>
         <%= yield %>
         <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %>
+
       </div>
 
     <% end %>

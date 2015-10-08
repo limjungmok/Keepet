@@ -27,6 +27,23 @@ class ReviewsController < ApplicationController
   def create
     @hospital = Hospital.find(params[:hospital_id])
     @review = @hospital.reviews.build(review_params)
+    if(params[:review][:grade] == "★")
+      @review.grade = 1
+      @review.save
+    elsif (params[:review][:grade]=="★★")
+      @review.grade = 2
+      @review.save
+    elsif (params[:review][:grade]=="★★★")
+      @review.grade = 3
+      @review.save
+    elsif (params[:review][:grade]=="★★★★")
+      @review.grade = 4
+      @review.save
+    else
+      @review.grade = 5
+      @review.save
+    end
+
     @review.r_user_name = current_user.name
     respond_to do |format|
       if @review.save
