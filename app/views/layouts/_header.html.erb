@@ -11,7 +11,7 @@
         <% end %>
         
         <% if logged_in? %>
-          <li><%= link_to @current_user.name + "님 환영합니다.", current_user %></li>
+          <li><%= link_to @current_user.name + "님! 환영합니다.", current_user %></li>
           <li><%= link_to "로그아웃", logout_path, class: "logout_btn", method: :delete %></li>
         <% else %>
           <li><%= link_to "로그인", login_path %></li>

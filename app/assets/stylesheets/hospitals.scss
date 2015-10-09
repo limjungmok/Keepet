@@ -267,7 +267,7 @@
   .past {
     color: #d5d5d5;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 300; 
   }
   .future {}
   .prev-month {
@@ -281,6 +281,7 @@
     font-weight: 700;
     p {
       font-weight: normal;
+      font-size: 14px;
     }
 
   }
@@ -296,6 +297,9 @@
 
 .simple-calendar .past{
   font-size: 0px;
+  p{
+    font-size: 0px;
+  }
 }
 
 .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th{
@@ -436,6 +440,7 @@
   width: 90%;
 }
 #hospital_review_user{
+  font-weight: bold;
   width: 200px;
 }
 #hospital_review_user_name{
@@ -498,4 +503,8 @@
     color: #e1e1e1;
     width: 70%;
   }
+}
+
+#review_submit_button{
+  text-align: center;
 }

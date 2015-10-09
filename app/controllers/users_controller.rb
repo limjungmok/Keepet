@@ -9,6 +9,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @meetings = Meeting.find_by(:name => @user.name)
+    @hospital = Hospital.find(@meetings.hospital_id)
   end
   
   def new

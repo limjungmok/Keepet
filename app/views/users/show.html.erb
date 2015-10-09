@@ -2,12 +2,15 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
+      <h2>
+        <%= @user.name %>님! 환영합니다.
+      </h2>
       <% if logged_in? %>
           <li><%= link_to "내 정보 변경", edit_user_path(current_user) %></li>
+          <br>
+          <h3>예약 현황</h3>
+          <li>병원명 : <%=@hospital.h_name%></li>
+          <li>예약 날짜 : <%= @meetings.created_at.strftime("%m월 %d일 ") %></li><br>
       <% end %>
     </section>
   </aside>

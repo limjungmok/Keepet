@@ -73,16 +73,15 @@
             <div class="tab-pane fade active in" id="calendar">
                 <div>
                     <%= month_calendar events: @meetings do |date, meetings| %>
-  
                       <%= date.strftime("%d") %><br>
                         <% if meetings.count < 5 %>
-                              <p style="color:#aaa">예약가능</p>
-                                  <% elsif meetings.count >= 5 && meetings.count < 10 %>
-                                      <p style="color:#feb650">예약포화</p>
-                                      <% elsif meetings.count >= 10 %>
-                                      <p style="color:#fd915f">예약불가</p>
+                          <p id ="asdf" style="color:#aaa">예약가능</p>
+                          <% elsif meetings.count >= 5 && meetings.count < 10 %>
+                            <p style="color:#feb650">예약포화</p>
+                          <% elsif meetings.count >= 10 %>
+                            <p style="color:#fd915f">예약불가</p>
                         <% end %>
-                        
+            
                     <% end %>
                 </div>
                 <div id="reservation">
