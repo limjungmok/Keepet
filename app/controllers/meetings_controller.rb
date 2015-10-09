@@ -29,7 +29,7 @@ class MeetingsController < ApplicationController
     @meeting = @hospital.meetings.build(meeting_params)
     respond_to do |format|
       if @meeting.save
-        flash[:success] = "예약 성공"
+        flash[:success] = current_user.name + "님! "+@meeting.created_at.strftime("%m월 %d일")+"예약 완료되었습니다."
         format.html { redirect_to @hospital }
         format.json { render :show, status: :created, location: @meeting }
       else
