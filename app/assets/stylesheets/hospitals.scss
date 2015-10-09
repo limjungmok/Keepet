@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .col-xs-9{
-	padding-right: 0px;
-	padding-left: 0px;
+   padding-right: 0px;
+   padding-left: 0px;
 }
 
 #h_index{
@@ -31,7 +31,9 @@
 
     border:4px solid #ffffff;
    &:hover {
-      border:4px solid #66ccb9;
+      border:4px solid #66ccb9
+
+      ;
    }
 }
 
@@ -63,7 +65,7 @@
 
 .map_page_right{
    padding: 0px 0px 12px 24px;
-   height: 840px;
+   height: 800px;
    overflow-y: auto;
    bakcground-color: #E8E8E8;
 }
@@ -91,7 +93,6 @@
 #hospital_album{
   width: 300px;
   height: 300px;
-
 }
 
 #hospital_detail{
@@ -101,7 +102,7 @@
   padding-top: 20px;
   background-color: #fff;
   color: #a0a0a0;
-  font-weight: 150;
+  font-weight: 100;
 }
 #hospital_grade_text{
   margin-left: 10px;
@@ -111,18 +112,13 @@
 #hospital_detail_name{
   font-size: 28px;
   color: #222;
-}
-#hospital_detail_address{
-  font-size: 16px;
-}
-#hospital_detail_phone{
-  font-size: 16px;
+  font-weight: 700;
 }
 
 #hospital_detail_left{
   width: 15%;
   color: #222;
-  font-weight: normal;
+  font-weight: bold;
   padding-left: 0px;
 }
 #hospital_detail_right{
@@ -130,7 +126,7 @@
 }
 #hospital_detail_price{
   color: #222;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 #hospital_detail_option{
@@ -478,4 +474,7 @@
   margin-left: 50px;
   position: relative;
   z-index: 2;
+  background: url(map_location_icon.png);
+  background-repeat: no-repeat;
+  border: transparent;
 }

@@ -9,9 +9,10 @@
     </head>
 
     <body>
-	   <input type="text" onclick="sample5_execDaumPostcode()" id="search_box_index" placeholder="   주소를 입력하세요">
-	   <%= image_tag "search_icon.png", class: "search_icon_index" %>
-       <button class="btn btn-default" id="search_location" onclick="myLocation()"> 현 위치 </button>
+	       <input type="text" onclick="sample5_execDaumPostcode()" id="search_box_index" placeholder="   주소를 입력하세요">
+	       <%= image_tag "search_icon.png", class: "search_icon_index" %>
+           <%= image_tag "map_location_btn.png", id: "search_location", 
+           onclick: "myLocation()" %>
 
 	   <div id="map"> </div>
     </body>
