@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .col-xs-9{
-	padding-right: 0px;
-	padding-left: 0px;
+   padding-right: 0px;
+   padding-left: 0px;
 }
 
 #h_index{
@@ -102,23 +102,23 @@
   margin: 10px;
   padding-top: 20px;
   background-color: #fff;
-  color: #555555;
+  color: #a0a0a0;
   font-weight: 100;
 }
 #hospital_grade_text{
   margin-left: 10px;
-  color: #555555;
+  color: #555;
   font-weight: 100px;
 }
 #hospital_detail_name{
   font-size: 28px;
-  color: #555555;
+  color: #222;
   font-weight: 700;
 }
 
 #hospital_detail_left{
   width: 15%;
-  color: #555555;
+  color: #222;
   font-weight: bold;
   padding-left: 0px;
 }
@@ -126,7 +126,7 @@
   width: 85%;
 }
 #hospital_detail_price{
-  color: #555555;
+  color: #222;
   font-weight: bold;
   line-height: 2.2em;
 }
@@ -481,10 +481,10 @@
 }
 
 #search_location {
-  margin-left: 30px;
+  margin-left: 50px;
   position: relative;
   z-index: 2;
-  background: url(map_location_btn.png);
+  background: url(map_location_icon.png);
   background-repeat: no-repeat;
   border: transparent;
   line-height: 2.5em;
