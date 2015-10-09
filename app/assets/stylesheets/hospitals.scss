@@ -483,12 +483,13 @@
 #search_location {
   margin-left: 50px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background: url(map_location_icon.png);
   background-repeat: no-repeat;
   border: transparent;
   line-height: 2.5em;
   outline: transparent;
+  cursor: pointer;
 }
 
 #hospital_detail_chart {

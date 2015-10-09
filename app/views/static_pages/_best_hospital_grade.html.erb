@@ -1,0 +1,55 @@
+
+<% if @hospital_3.avg_grade == 5 %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_on.png" , :width => "1px", :height => "1px" %>
+        <%= image_tag "grade_on.png" , :width => "1px", :height => "1px" %>
+        <%= image_tag "grade_on.png" , :width => "1px", :height => "1px" %>
+        <%= image_tag "grade_on.png" , :width => "1px", :height => "1px" %>
+        <%= image_tag "grade_on.png" , :width => "1px", :height => "1px" %>
+    </div>
+
+<% elsif @hospital_3.avg_grade >= 4 && @hospital_3.avg_grade < 5 %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+    </div>
+
+<% elsif @hospital_3.avg_grade >= 3 && @hospital_3.avg_grade < 4 %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+    </div>
+
+<% elsif @hospital_3.avg_grade >= 2 && @hospital_3.avg_grade < 3 %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+    </div>
+
+<% elsif @hospital_3.avg_grade >= 1 && @hospital_3.avg_grade < 2 %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_on.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+    </div>
+
+<% else %>
+    <div id="home_hospital_info_grade">
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+        <%= image_tag "grade_off.png" , :width => "5px", :height => "5px" %>
+    </div>
+<% end %> 

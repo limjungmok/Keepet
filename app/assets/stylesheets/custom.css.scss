@@ -59,11 +59,11 @@ p {
   letter-spacing: -1px;
   margin-top: 10px;
   font-weight: bold;
-  vertical-align: center;
-  &:hover {
-    color: #222;
-    text-decoration: none;
-  }
+  line-height: 4.2em;
+    &:hover {
+      color: #222;
+      text-decoration: none;
+    }
 }
 
 /* footer */
