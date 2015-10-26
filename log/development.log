@@ -8151,3 +8151,765 @@ Started GET "/assets/map_location_btn-5cfb21af4d7362480bb1b831aeb964162afd1c7d74
 
 
 Started GET "/assets/map_grade_dimmed-1c3da5e6a11a950e36e30d55bec322b5e4b61a392b56e4b55cf3a4ba0b9d51d2.png" for ::1 at 2015-10-26 16:08:24 +0900
+
+
+Started GET "/hospitals" for ::1 at 2015-10-26 16:10:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HospitalsController#index as HTML
+  [1m[35mHospital Load (0.2ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '중곡동물병원' AND "hospitals"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '중곡동물병원' AND "hospitals"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '기린동물종합병원' AND "hospitals"."id" != 2) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '기린동물종합병원' AND "hospitals"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '다온동물병원' AND "hospitals"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '다온동물병원' AND "hospitals"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '스타동물의료센터' AND "hospitals"."id" != 4) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '스타동물의료센터' AND "hospitals"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '혜민동물병원' AND "hospitals"."id" != 5) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '혜민동물병원' AND "hospitals"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '나루동물병원' AND "hospitals"."id" != 6) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '나루동물병원' AND "hospitals"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '자양동물병원' AND "hospitals"."id" != 7) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '자양동물병원' AND "hospitals"."id" != 7) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울어린이대공원동물병원' AND "hospitals"."id" != 8) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울어린이대공원동물병원' AND "hospitals"."id" != 8) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '반디동물병원' AND "hospitals"."id" != 9) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '반디동물병원' AND "hospitals"."id" != 9) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '드림펫동물병원' AND "hospitals"."id" != 10) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '드림펫동물병원' AND "hospitals"."id" != 10) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '웰니스클리닉동물병원' AND "hospitals"."id" != 11) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 11]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '웰니스클리닉동물병원' AND "hospitals"."id" != 11) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '양지동물병원' AND "hospitals"."id" != 12) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 12]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '양지동물병원' AND "hospitals"."id" != 12) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울동물병원' AND "hospitals"."id" != 13) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울동물병원' AND "hospitals"."id" != 13) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '우리동물병원' AND "hospitals"."id" != 14) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 14]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '우리동물병원' AND "hospitals"."id" != 14) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.3ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '좋은동물병원' AND "hospitals"."id" != 15) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 15]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '좋은동물병원' AND "hospitals"."id" != 15) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered hospitals/_hospital_map_search.html.erb (206.0ms)
+  Rendered hospitals/_hospital_map.html.erb (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 15]]
+  Rendered hospitals/index.html.erb within layouts/application (433.0ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (90.1ms)
+Completed 200 OK in 1234ms (Views: 1048.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/albums.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/hospitals.self-36f44cdd45793f28e51b499003e12d0433fe138397c62085914125313fcf6895.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/custom.self-c1a3527b7cd6add73f992d34cd485d823470aebbff305de01f23347fb478e2e3.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/sessions.self-fa8ceafc240a54a4f1bba9b388fb8761f75be1a66187fb9bae3b76bc620d05b8.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/scaffold.self-87ac316d37263c4d0c734208dc7e0c32ae44cd81b851a2b81eb0536641e6ca85.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/meetings.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/reviews.self-7c643c63f09c5207ddc971ef66d07b3d41758ea037645ab8acf5d5b8c3156b24.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/static_pages.self-6b40c9cc7bb51ae961721452ed91a5d9226a6bd8ea0ff414a88acaa87183e629.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/users.self-81b98dd3d1fee708d5b5a2c3e6b75587e35c22082b721c580b9bacbc9b722546.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/talks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/application.self-0ba319980f0be6cfa7ef7f0d9fbc68e44ac16ae1c1ed4c2c11db350e6457b7fc.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/fullcalendar.self-bfd1e733800d14d6124c551399fa09d9fb4108c7623ad7bd2cf351ef92704af5.css?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/turbolinks.self-680e388bf7f759d85e2dbe0044d33f55e12b26da721317111c01ec92e53df55e.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/albums.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/hospitals.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/meetings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/reservations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/talks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/fullcalendar.self-8668c2e6be32331fb05b9c8cb047adeb64ae3d0575ba9d2f029b9a4cb37ec3f5.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/application.self-abf55f804796de5da127bcfc5fb78b0494e1e0968b014300c8b6ae359f4a19ad.js?body=1" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/keepet_logo-f5c00416f5469df07d3fa1fb8a5d7f5a5f249911c1fa7dd8c181929b59cbf3a3.png" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/map_grade_dimmed-1c3da5e6a11a950e36e30d55bec322b5e4b61a392b56e4b55cf3a4ba0b9d51d2.png" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/search_icon-0fbf8f81f505c8d9b0afad625e1a3341c93320f81f62bd423a02b6181a644300.png" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/assets/map_location_btn-5cfb21af4d7362480bb1b831aeb964162afd1c7d745f8442313c5bd3062621c3.png" for ::1 at 2015-10-26 16:10:11 +0900
+
+
+Started GET "/" for ::1 at 2015-10-26 19:15:03 +0900
+Processing by StaticPagesController#home as HTML
+  [1m[35mHospital Load (0.2ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  Rendered static_pages/_best_hospital_grade_3.html.erb (13.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  Rendered static_pages/_best_hospital_grade_2.html.erb (13.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered static_pages/_best_hospital_grade_6.html.erb (13.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  Rendered static_pages/_best_hospital_grade_4.html.erb (12.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  Rendered static_pages/_best_hospital_grade_5.html.erb (13.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  Rendered static_pages/_best_hospital_grade_1.html.erb (15.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered static_pages/_best_hospital_grade_8.html.erb (75.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered static_pages/_best_hospital_grade_7.html.erb (12.4ms)
+  Rendered static_pages/_best_hospital.html.erb (224.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (235.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 492ms (Views: 487.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/hospitals" for ::1 at 2015-10-26 19:15:26 +0900
+Processing by HospitalsController#index as HTML
+  [1m[35mHospital Load (0.2ms)[0m  SELECT "hospitals".* FROM "hospitals"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '중곡동물병원' AND "hospitals"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '중곡동물병원' AND "hospitals"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '기린동물종합병원' AND "hospitals"."id" != 2) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '기린동물종합병원' AND "hospitals"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.2ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '다온동물병원' AND "hospitals"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '다온동물병원' AND "hospitals"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '스타동물의료센터' AND "hospitals"."id" != 4) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '스타동물의료센터' AND "hospitals"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '혜민동물병원' AND "hospitals"."id" != 5) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '혜민동물병원' AND "hospitals"."id" != 5) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '나루동물병원' AND "hospitals"."id" != 6) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '나루동물병원' AND "hospitals"."id" != 6) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '자양동물병원' AND "hospitals"."id" != 7) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '자양동물병원' AND "hospitals"."id" != 7) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울어린이대공원동물병원' AND "hospitals"."id" != 8) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울어린이대공원동물병원' AND "hospitals"."id" != 8) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '반디동물병원' AND "hospitals"."id" != 9) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '반디동물병원' AND "hospitals"."id" != 9) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '드림펫동물병원' AND "hospitals"."id" != 10) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 10]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 10]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '드림펫동물병원' AND "hospitals"."id" != 10) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '웰니스클리닉동물병원' AND "hospitals"."id" != 11) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 11]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '웰니스클리닉동물병원' AND "hospitals"."id" != 11) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '양지동물병원' AND "hospitals"."id" != 12) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 12]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 12]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '양지동물병원' AND "hospitals"."id" != 12) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울동물병원' AND "hospitals"."id" != 13) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '서울동물병원' AND "hospitals"."id" != 13) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '우리동물병원' AND "hospitals"."id" != 14) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 14]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 14]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '우리동물병원' AND "hospitals"."id" != 14) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mHospital Exists (0.1ms)[0m  SELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '좋은동물병원' AND "hospitals"."id" != 15) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 15]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 15]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "hospitals" WHERE ("hospitals"."h_name" = '좋은동물병원' AND "hospitals"."id" != 15) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  Rendered hospitals/_hospital_map_search.html.erb (6.4ms)
+  Rendered hospitals/_hospital_map.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 12]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 15]]
+  Rendered hospitals/index.html.erb within layouts/application (160.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 430ms (Views: 377.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/map_location_icon.png" for ::1 at 2015-10-26 19:15:27 +0900
+
+ActionController::RoutingError (No route matches [GET] "/assets/map_location_icon.png"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (118.6ms)
+
+
+Started GET "/" for ::1 at 2015-10-26 19:16:05 +0900
+Processing by StaticPagesController#home as HTML
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mHospital Load (0.0ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mHospital Load (0.0ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  Rendered static_pages/_best_hospital_grade_3.html.erb (11.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  Rendered static_pages/_best_hospital_grade_2.html.erb (10.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered static_pages/_best_hospital_grade_6.html.erb (10.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  Rendered static_pages/_best_hospital_grade_4.html.erb (11.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 6]]
+  Rendered static_pages/_best_hospital_grade_5.html.erb (9.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  Rendered static_pages/_best_hospital_grade_1.html.erb (8.9ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered static_pages/_best_hospital_grade_8.html.erb (10.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered static_pages/_best_hospital_grade_7.html.erb (11.9ms)
+  Rendered static_pages/_best_hospital.html.erb (108.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+  Rendered static_pages/home.html.erb within layouts/application (114.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 328ms (Views: 324.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/hospitals/8" for ::1 at 2015-10-26 19:16:15 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered hospitals/_hospital_grade.html.erb (12.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mMeeting Load (0.2ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (335.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (91.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (1.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (456.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 601ms (Views: 592.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hospitals/9" for ::1 at 2015-10-26 19:16:18 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mReview Load (0.4ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered hospitals/_hospital_grade.html.erb (9.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mMeeting Load (0.2ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (100.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (71.3ms)
+Completed 200 OK in 321ms (Views: 312.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hospitals/3" for ::1 at 2015-10-26 19:16:21 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  Rendered hospitals/_hospital_grade.html.erb (11.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  [1m[36mMeeting Load (0.1ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (27.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 233ms (Views: 229.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hospitals/7" for ::1 at 2015-10-26 19:16:23 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered hospitals/_hospital_grade.html.erb (10.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mMeeting Load (0.1ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (6.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered meetings/_form.html.erb (5.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 244ms (Views: 240.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hospitals/5" for ::1 at 2015-10-26 19:16:24 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  Rendered hospitals/_hospital_grade.html.erb (11.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 5]]
+  [1m[36mMeeting Load (0.2ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 5]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (6.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (32.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 244ms (Views: 237.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hospitals/3" for ::1 at 2015-10-26 19:16:26 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHospital Load (0.1ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 3]]
+  Rendered hospitals/_hospital_grade.html.erb (10.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 3]]
+  [1m[35mMeeting Load (0.1ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?  [["hospital_id", 3]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 234ms (Views: 231.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hospitals/4" for ::1 at 2015-10-26 19:16:28 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 4]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 4]]
+  Rendered hospitals/_hospital_grade.html.erb (12.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 4]]
+  [1m[36mMeeting Load (0.2ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 4]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (4.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (32.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 253ms (Views: 246.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hospitals/7" for ::1 at 2015-10-26 19:17:05 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHospital Load (0.2ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mReview Load (0.3ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered hospitals/_hospital_grade.html.erb (11.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 7]]
+  [1m[35mMeeting Load (0.1ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?  [["hospital_id", 7]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 234ms (Views: 227.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hospitals/1" for ::1 at 2015-10-26 19:17:08 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  Rendered hospitals/_hospital_grade.html.erb (8.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 1]]
+  [1m[36mMeeting Load (0.1ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 1]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 235ms (Views: 230.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hospitals/9" for ::1 at 2015-10-26 19:17:11 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mHospital Load (0.3ms)[0m  [1mSELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mReview Load (0.1ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered hospitals/_hospital_grade.html.erb (9.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 9]]
+  [1m[35mMeeting Load (0.1ms)[0m  SELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?  [["hospital_id", 9]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered meetings/_form.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 236ms (Views: 229.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hospitals/8" for ::1 at 2015-10-26 19:17:16 +0900
+Processing by HospitalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mHospital Load (0.1ms)[0m  SELECT  "hospitals".* FROM "hospitals" WHERE "hospitals"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered hospitals/_hospital_grade.html.erb (11.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."hospital_id" = ?  [["hospital_id", 8]]
+  [1m[36mMeeting Load (0.1ms)[0m  [1mSELECT "meetings".* FROM "meetings" WHERE "meetings"."hospital_id" = ?[0m  [["hospital_id", 8]]
+  Rendered /Library/Ruby/Gems/2.0.0/gems/simple_calendar-2.0.0/app/views/simple_calendar/_month_calendar.html.erb (3.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered meetings/_form.html.erb (5.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered hospitals/_hospital_review.html.erb (0.2ms)
+  Rendered hospitals/show.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 251ms (Views: 245.8ms | ActiveRecord: 0.7ms)
