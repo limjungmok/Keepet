@@ -5,7 +5,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
 
-        <%if logged_in? && current_user.admin? %>
+        <%if logged_in? %>
           <li>
             <%= link_to "Hospital Create",  h_create_path, data: { confirm: 'Are you sure?' } %>
           </li>

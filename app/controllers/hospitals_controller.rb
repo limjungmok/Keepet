@@ -10,7 +10,7 @@ class HospitalsController < ApplicationController
 		service_key_gangnam = "70554f5a78636e643739784d584f62"
 		service_key_gwangjin = "67796c6966636e643131355659425258"
 		#동물병원 API
-		get_json(service_key_gwangjin)
+		get_json(service_key_gangnam)
 		#동물병원 주소 -> x,y API
 		#get_json_location(nhn_service_key)
 	end
@@ -109,11 +109,14 @@ class HospitalsController < ApplicationController
 		#JSON  타입
 		type="/json/"
 		#찾으려는 위치
+		#search_location = "gwangjin"
 		search_location = "gwangjin"
+
 		#서비스키
 		service_key = get_service_key
 		#병원이 속한 시/구
-		location_hospital = "Gwangjin"
+		#location_hospital = "Gwangjin"
+		location_hospital="Gwangjin"
 		#기본 URL
 		base_url = "http://openapi."+search_location+
 					".go.kr:8088/"+service_key+type+location_hospital+
