@@ -447,9 +447,6 @@
   font-size: 15px;
   font-weight: bold;
 }
-#hospital_review_content{
-
-}
 
 #hospital_review_text{
   font-size: 15px;
@@ -463,8 +460,6 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-}
-#hospital_review_input_content{
 }
 
 #search_box_index {
@@ -490,12 +485,13 @@
 #search_location {
   margin-left: 50px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background: url(map_location_icon.png);
   background-repeat: no-repeat;
   border: transparent;
   line-height: 2.5em;
   outline: transparent;
+  cursor: pointer;
 }
 
 #hospital_detail_chart {

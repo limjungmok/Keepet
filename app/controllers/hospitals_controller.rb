@@ -8,9 +8,9 @@ class HospitalsController < ApplicationController
 
 	def new
 		service_key_gangnam = "70554f5a78636e643739784d584f62"
-		
+		service_key_gwangjin = "67796c6966636e643131355659425258"
 		#동물병원 API
-		get_json(service_key_gangnam)
+		get_json(service_key_gwangjin)
 		#동물병원 주소 -> x,y API
 		#get_json_location(nhn_service_key)
 	end
@@ -109,11 +109,11 @@ class HospitalsController < ApplicationController
 		#JSON  타입
 		type="/json/"
 		#찾으려는 위치
-		search_location = "gangnam"
+		search_location = "gwangjin"
 		#서비스키
 		service_key = get_service_key
 		#병원이 속한 시/구
-		location_hospital = "Gn"
+		location_hospital = "Gwangjin"
 		#기본 URL
 		base_url = "http://openapi."+search_location+
 					".go.kr:8088/"+service_key+type+location_hospital+
@@ -121,7 +121,7 @@ class HospitalsController < ApplicationController
 		#JSON객체를 받음
 	    @response = HTTParty.get(base_url)
 	    #객체를 쪼갠다.몸통 -> GnAnimalHospital 객체 -> row 배열
-	    @hospital = JSON.parse(@response.body)["GnAnimalHospital"]["row"]
+	    @hospital = JSON.parse(@response.body)["GwangjinAnimalHospital"]["row"]
 
 	    #배열을 전부 돌린다. 동시에 DB에 저장해준다.
 	    #돌릴때, 반환되는 주소를 가지고 x,y값을 찾도록 한다.

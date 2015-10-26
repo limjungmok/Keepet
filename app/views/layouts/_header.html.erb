@@ -1,20 +1,21 @@
+
 <header class="navbar navbar-static-top navbar-inverse" id = "anchor">
   <div class="container">
     <%= link_to image_tag("keepet_logo.png"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <!--추후 관리자 모드-->
-        <% if logged_in? && current_user.admin? %>
-        <li>
-          <%= link_to "Hospital Create",  h_create_path, data: { confirm: 'Are you sure?' } %>
-        </li>
+
+        <%if logged_in? && current_user.admin? %>
+          <li>
+            <%= link_to "Hospital Create",  h_create_path, data: { confirm: 'Are you sure?' } %>
+          </li>
         <% end %>
-        
+
         <% if logged_in? %>
-          <li><%= link_to @current_user.name + "님! 환영합니다.", current_user %></li>
-          <li><%= link_to "로그아웃", logout_path, class: "logout_btn", method: :delete %></li>
+          <li id = "header_user"><span id ="header_username"><%= @current_user.name%></span>님! 환영합니다.</li>
+          <li><%= button_to "로그아웃", logout_path, :class => "button", method: :delete, id: "header_login_logout" %></li>
         <% else %>
-          <li><%= link_to "로그인", login_path %></li>
+          <li><%= button_to "로그인", login_path, :class => "button", :method => :get, id: "header_login_logout" %></li>
         <% end %>
       </ul>
     </nav>

@@ -1,0 +1,91 @@
+
+<% if @hospital_4.avg_grade == 5 %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+
+<% elsif @hospital_4.avg_grade >= 4 && @hospital_4.avg_grade < 5 %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_off.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+
+<% elsif @hospital_4.avg_grade >= 3 && @hospital_4.avg_grade < 4 %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+
+<% elsif @hospital_4.avg_grade >= 2 && @hospital_4.avg_grade < 3 %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+
+<% elsif @hospital_4.avg_grade >= 1 && @hospital_4.avg_grade < 2 %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_on.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+
+<% else %>
+    <span id="home_hospital_info_grade_icon">
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+        <%= image_tag "grade_off.png" %>
+    </span>
+    <span class="home_hospital_info_grade">
+        <%= @hospital_4.avg_grade.round(1) %>
+    </span>
+    <span class="home_hospital_info_grade_count">
+        (<%= @hospital_4.reviews.count %>명 참여)
+    </span>
+<% end %> 
