@@ -9,8 +9,6 @@
           <li><%= link_to "내 정보 변경", edit_user_path(current_user) %></li>
           <br>
           <h3>예약 현황</h3>
-          <li>병원명 : <%=@hospital.h_name%></li>
-          <li>예약 날짜 : <%= @meetings.created_at.strftime("%m월 %d일 ") %></li><br>
       <% end %>
     </section>
   </aside>

@@ -9,8 +9,6 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @meetings = Meeting.find_by(:name => @user.name)
-    @hospital = Hospital.find(@meetings.hospital_id)
   end
   
   def new
@@ -32,7 +30,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update_attributes(user_params)
-      redirect_to @user
+      redirect_to root_path
     else
       render 'edit'
     end

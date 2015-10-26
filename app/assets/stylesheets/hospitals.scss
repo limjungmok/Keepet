@@ -202,6 +202,7 @@
 #select_question{
   height: 50px;
   display: inline;
+
   text-align: center;
   font-size: 15px;
   font-weight: bold;
@@ -232,7 +233,6 @@
   background-color: #fff;
 }
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
-  border: 1px dotted #ddd;
 }
 .simple-calendar{
   text-align: center;
